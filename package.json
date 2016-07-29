@@ -1,0 +1,41 @@
+{
+  "name": "common-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src",
+    "watch": "webpack-dev-server --hot",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abouthiroppy/common-boilerplate.git"
+  },
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abouthiroppy/common-boilerplate/issues"
+  },
+  "homepage": "https://github.com/abouthiroppy/common-boilerplate#readme",
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-polyfill": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-0": "*",
+    "babel-preset-stage-1": "*",
+    "css-loader": "*",
+    "eslint": "*",
+    "react-hot-loader": "*",
+    "style-loader": "*",
+    "webpack": "^*",
+    "webpack-dev-server": "*"
+  }
+}
