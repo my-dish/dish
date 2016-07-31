@@ -1,47 +1,51 @@
 const path    = require('path');
 const webpack = require('webpack');
 
-const DEBUG = true;
+const PORT = 8080;
 
 module.exports = {
-  entry: path.join(__dirname, 'src', 'index.js'),
+  entry: [
+    path.join(__dirname, 'src', 'index.js'),
+    `webpack-dev-server/client?http://0.0.0.0:${PORT}`,
+    'webpack/hot/only-dev-server',
+  ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/dist/'
   },
+  cache: true,
   target: 'web',
+  devtool: 'cheap-module-eval-source-map',
   resolve: {
     extensions: ['', '.js', '.css']
   },
-  devtool: 'cheap-module-eval-source-map',
   module: {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        include: path.resolve(__dirname, 'src'),
-        exclude: path.resolve(__dirname, 'node_modules')
+        loader: 'react-hot!babel',
+        include: path.join(__dirname, 'src'),
+        exclude: path.join(__dirname, 'node_modules')
       },
       {
         test: /\.css$/,
-        loader: 'style!css?modules'
+        loader: 'style!css?modules&importLoaders=1&localIdentName=[path]__[name]__[local]__[hash:base64:5]'
       }
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(), // if you don't specify `--hot`
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    ...(DEBUG ? [] : [
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: true
-        }
-      }),
-      new webpack.optimize.AggressiveMergingPlugin(),
-    ]),
+    })
   ],
+  devServer: {
+    hot: true,
+    port: PORT,
+    cache: true,
+    inline: true,
+    colors: true,
+    contentBase: '.'
+  }
 };

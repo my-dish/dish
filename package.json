@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
-    "watch": "webpack-dev-server --hot",
-    "build": "webpack -p"
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack --config ./webpack.production.config.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "babel-core": "*",
+    "babel-eslint": "*",
     "babel-loader": "*",
     "babel-polyfill": "*",
     "babel-preset-es2015": "*",
@@ -33,6 +34,7 @@
     "babel-preset-stage-1": "*",
     "css-loader": "*",
     "eslint": "*",
+    "eslint-plugin-react": "*",
     "react-hot-loader": "*",
     "style-loader": "*",
     "webpack": "^*",

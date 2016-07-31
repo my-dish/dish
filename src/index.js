@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Label from './components/Label';
+import Hero from './components/Hero';
 
 class Root extends React.Component {
   render() {
     return (
       <div>
-        <Label />
+        <Hero />
       </div>
     );
   }
