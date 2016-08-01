@@ -7,6 +7,7 @@
 </div>
 
 [![Build Status](https://travis-ci.org/abouthiroppy/dish.svg?branch=master)](https://travis-ci.org/abouthiroppy/dish)
+[![codecov](https://codecov.io/gh/abouthiroppy/dish/branch/master/graph/badge.svg)](https://codecov.io/gh/abouthiroppy/dish)
 
 ## Tools
 - webpack
