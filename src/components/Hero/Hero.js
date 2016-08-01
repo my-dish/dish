@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../styles/hero';
+import styles from './hero.style.css';
 
 class Hero extends React.Component {
   render() {
