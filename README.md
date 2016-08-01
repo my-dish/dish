@@ -27,3 +27,20 @@ $ npm install
 $ npm run build
 $ open index.html
 ```
+
+## Tasks
+### Development
+```
+$ npm start
+$ open http://localhost:8080 # or http://localhost:8080/webpack-dev-server/
+```
+
+### Test
+```
+$ npm test # or npm test:watch
+```
+
+### Build
+```
+$ npm run build
+```
