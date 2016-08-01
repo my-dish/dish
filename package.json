@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "ava",
+    "test:watch": "ava -w",
     "lint": "eslint src",
     "start": "webpack-dev-server --hot --inline",
     "build": "webpack --config ./webpack.production.config.js"
@@ -45,7 +46,7 @@
     "react-hot-loader": "*",
     "sinon": "*",
     "style-loader": "*",
-    "webpack": "^*",
+    "webpack": "*",
     "webpack-dev-server": "*"
   },
   "ava": {
