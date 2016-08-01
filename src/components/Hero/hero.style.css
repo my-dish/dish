@@ -1,13 +1,16 @@
 .container {
   border-radius: 10px;
+  display: flex;
   margin: auto;
-  width: 200px;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
   composes: container from '../../common.css';
 }
 
 .title {
   color: #3498db;
   font-size: 3rem;
-  margin-top: 150px;
+  margin: 0;
   text-align: center;
 }
