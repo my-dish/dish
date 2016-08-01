@@ -1,3 +1,10 @@
+.container {
+  border-radius: 10px;
+  margin: auto;
+  width: 200px;
+  composes: container from '../../common.css';
+}
+
 .title {
   color: #3498db;
   font-size: 3rem;
