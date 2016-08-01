@@ -6,6 +6,8 @@
   <strong>template for frontend application</strong>
 </div>
 
+[![Build Status](https://travis-ci.org/abouthiroppy/dish.svg?branch=master)](https://travis-ci.org/abouthiroppy/dish)
+
 ## Tools
 - webpack
 - babel
