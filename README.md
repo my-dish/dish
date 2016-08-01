@@ -14,6 +14,12 @@
 ## Frameworks
 - react
 
+## Testing Tools
+- ava
+- enzyme
+- jsdom
+- sinon
+
 ## Usage
 ```
 $ git clone https://github.com/abouthiroppy/dish-for-react.git
