@@ -9,6 +9,13 @@
 [![Build Status](https://travis-ci.org/abouthiroppy/dish.svg?branch=master)](https://travis-ci.org/abouthiroppy/dish)
 [![codecov](https://codecov.io/gh/abouthiroppy/dish/branch/master/graph/badge.svg)](https://codecov.io/gh/abouthiroppy/dish)
 
+## Usage
+```
+$ npm install -g my-dish
+$ dish <project-directory>
+$ cd <project-directory>
+```
+
 ## Tools
 - webpack
 - babel
@@ -22,28 +29,3 @@
 - enzyme
 - jsdom
 - sinon
-
-## Usage
-```
-$ git clone https://github.com/abouthiroppy/dish-for-react.git
-$ npm install
-$ npm run build
-$ open index.html
-```
-
-## Tasks
-### Development
-```
-$ npm start
-$ open http://localhost:8080 # or http://localhost:8080/webpack-dev-server/
-```
-
-### Test
-```
-$ npm test # or npm test:watch
-```
-
-### Build
-```
-$ npm run build
-```
