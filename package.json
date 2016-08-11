@@ -2,13 +2,13 @@
   "name": "dist",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
   "scripts": {
     "test": "ava",
     "test:watch": "ava -w",
-    "lint": "eslint src",
-    "start": "webpack-dev-server",
-    "build": "webpack --config ./webpack.production.config.js"
+    "lint": "eslint bin"
+  },
+  "bin": {
+    "dish": "./bin/my-dish.js"
   },
   "repository": {
     "type": "git",
@@ -21,33 +21,13 @@
   },
   "homepage": "https://github.com/abouthiroppy/common-boilerplate#readme",
   "dependencies": {
-    "react": "*",
-    "react-dom": "*"
+    "cross-spawn": "^4.0.0",
+    "fs-extra": "^0.30.0",
+    "path-exists": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "*",
-    "babel-core": "*",
-    "babel-eslint": "*",
-    "babel-loader": "*",
-    "babel-plugin-transform-object-assign": "*",
-    "babel-plugin-transform-strict-mode": "*",
-    "babel-polyfill": "*",
-    "babel-preset-es2015": "*",
-    "babel-preset-react": "*",
-    "babel-preset-stage-0": "*",
-    "babel-preset-stage-1": "*",
-    "css-loader": "*",
-    "enzyme": "*",
-    "eslint": "*",
-    "eslint-plugin-react": "*",
-    "ignore-styles": "*",
-    "jsdom": "*",
-    "react-addons-test-utils": "*",
-    "react-hot-loader": "*",
-    "sinon": "*",
-    "style-loader": "*",
-    "webpack": "*",
-    "webpack-dev-server": "*"
+    "ava": "^0.16.0",
+    "eslint": "^3.2.2"
   },
   "ava": {
     "files": [
