@@ -22,7 +22,7 @@ module.exports = (projectName, projectPath) => {
   // install template
   install([
     'install',
-    'abouthiroppy/dish'
+    'my-dish'
   ]);
 
   // install dependencies
