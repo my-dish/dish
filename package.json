@@ -1,5 +1,5 @@
 {
-  "name": "dist",
+  "name": "dish",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,7 +8,7 @@
     "lint": "eslint bin"
   },
   "bin": {
-    "dish": "./bin/my-dish.js"
+    "dish": "./bin/dish.js"
   },
   "repository": {
     "type": "git",
