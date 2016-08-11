@@ -1,19 +1,12 @@
 {
-  "parser": "babel-eslint",
   "rules": {
-    "react/jsx-uses-vars": 1
+    "no-console": 0
   },
   "env": {
     "es6": true,
-    "node": true,
-    "mocha": true,
-    "browser": true
+    "node": true
   },
-  "plugins": [
-    "react"
-  ],
   "ecmaFeatures": {
-    "jsx": true,
     "modules": true
   },
   "globals": {

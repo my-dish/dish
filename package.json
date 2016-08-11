@@ -4,7 +4,6 @@
   "description": "",
   "scripts": {
     "test": "ava",
-    "test:watch": "ava -w",
     "lint": "eslint bin"
   },
   "bin": {
@@ -21,8 +20,10 @@
   },
   "homepage": "https://github.com/abouthiroppy/common-boilerplate#readme",
   "dependencies": {
+    "chalk": "^1.1.3",
     "cross-spawn": "^4.0.0",
     "fs-extra": "^0.30.0",
+    "lodash": "^4.14.2",
     "path-exists": "^3.0.0"
   },
   "devDependencies": {
@@ -35,11 +36,6 @@
     ],
     "concurrency": 5,
     "failFast": true,
-    "tap": true,
-    "require": [
-      "ignore-styles",
-      "babel-register"
-    ],
-    "babel": "inherit"
+    "tap": true
   }
 }
