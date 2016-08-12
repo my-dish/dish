@@ -1,14 +1,14 @@
 'use strict';
 
-const _     = require('lodash');
-const fs    = require('fs');
-const path  = require('path');
-const spawn = require('cross-spawn');
+const _        = require('lodash');
+const fs       = require('fs');
+const path     = require('path');
+const spawn    = require('cross-spawn');
+const env      = require('../data/env');
+const tasks    = require('../data/tasks');
+const packages = require('../data/packages');
 
 module.exports = (projectName, projectPath) => {
-  const env         = JSON.parse(fs.readFileSync('../data/env.json', 'utf-8'));
-  const tasks       = JSON.parse(fs.readFileSync('../data/tasks.json', 'utf-8'));
-  const packages    = JSON.parse(fs.readFileSync('../data/packages.json', 'utf-8'));
   const packageInfo = {
     name: projectName,
     main: 'src/index.js',

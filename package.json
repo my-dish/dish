@@ -1,11 +1,25 @@
 {
   "name": "my-dish",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Generate a template of React App.",
   "scripts": {
     "test": "[TODO]",
     "lint": "eslint bin"
   },
+  "files": [
+    "bin",
+    "data",
+    "template"
+  ],
+  "keywords": [
+    "template",
+    "react",
+    "cli",
+    "generate",
+    "scaffolding",
+    "babel",
+    "webpack"
+  ],
   "bin": {
     "dish": "./bin/dish.js"
   },
