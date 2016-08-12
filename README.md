@@ -14,6 +14,7 @@
 $ npm install -g my-dish
 $ dish <project-directory>
 $ cd <project-directory>
+$ npm start or npm build
 ```
 
 ## Tools

@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "Generate a template of React App.",
   "scripts": {
-    "test": "[TODO]",
+    "test": "echo [TODO]",
     "lint": "eslint bin"
   },
   "files": [
