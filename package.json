@@ -28,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abouthiroppy/common-boilerplate.git"
+    "url": "git+https://github.com/abouthiroppy/dish.git"
   },
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abouthiroppy/common-boilerplate/issues"
+    "url": "https://github.com/abouthiroppy/dish/issues"
   },
-  "homepage": "https://github.com/abouthiroppy/common-boilerplate#readme",
+  "homepage": "https://github.com/abouthiroppy/dish#readme",
   "dependencies": {
     "chalk": "^1.1.3",
     "cross-spawn": "^4.0.0",
