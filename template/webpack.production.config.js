@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   target: 'web',
-  join: {
+  resolve: {
     extensions: ['', '.js', '.css']
   },
   module: {
