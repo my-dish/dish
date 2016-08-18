@@ -5,9 +5,9 @@ const fs       = require('fs');
 const path     = require('path');
 const rc       = require('rc');
 const spawn    = require('cross-spawn');
-const env      = require('../data/env');
-const tasks    = require('../data/tasks');
-const packages = require('../data/packages');
+const env      = require('../npm/env');
+const tasks    = require('../npm/tasks');
+const packages = require('../npm/packages');
 
 module.exports = (projectName, projectPath) => {
   const npmrc  = rc('npm');
