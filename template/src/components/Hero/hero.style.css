@@ -1,3 +1,5 @@
+$text-color: #3498db;
+
 .container {
   border-radius: 10px;
   display: flex;
@@ -9,7 +11,7 @@
 }
 
 .title {
-  color: #3498db;
+  color: $text-color;
   font-size: 3rem;
   margin: 0;
   text-align: center;
