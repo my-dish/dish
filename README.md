@@ -19,11 +19,19 @@ $ npm start or npm build
 
 ## Tools
 - webpack
+  - webpack-dev-server
+  - webpack-dashboard
 - babel
+  - es2015
+  - stage-0
+  - stage-1
 - eslint
 
 ## Frameworks
 - react
+- postcss(use css-modules)
+  - precss
+  - autoprefixer
 
 ## Testing Tools
 - ava
