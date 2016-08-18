@@ -1,5 +1,10 @@
-const path    = require('path');
-const webpack = require('webpack');
+'use strict';
+
+const path              = require('path');
+const precss            = require('precss');
+const webpack           = require('webpack');
+const autoprefixer      = require('autoprefixer');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, 'src', 'index.js'),
@@ -21,11 +26,19 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css?modules'
+        loader: 'style!css?modules!postcss'
+        // loader: ExtractTextPlugin.extract(
+        //   'style',
+        //   [
+        //     'css?modules&importLoaders=1&localIdentName=[hash:base64:5]',
+        //     'postcss'
+        //   ]
+        // )
       }
     ]
   },
   plugins: [
+    // new ExtractTextPlugin('styles.css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
@@ -41,5 +54,6 @@ module.exports = {
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
-  ]
+  ],
+  postcss: () => [precss, autoprefixer]
 };

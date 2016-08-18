@@ -28,6 +28,7 @@ module.exports = {
     'precss',
     'postcss-loader',
     'webpack',
+    'webpack-dashboard',
     'webpack-dev-server'
   ]
 }

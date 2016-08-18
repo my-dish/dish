@@ -1,7 +1,15 @@
-const path    = require('path');
-const webpack = require('webpack');
+'use strict';
 
-const PORT = 8080;
+const path              = require('path');
+const precss            = require('precss');
+const webpack           = require('webpack');
+const Dashboard         = require('webpack-dashboard');
+const autoprefixer      = require('autoprefixer');
+const DashboardPlugin   = require('webpack-dashboard/plugin');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const PORT      = 8080;
+const dashboard = new Dashboard();
 
 module.exports = {
   entry: [
@@ -30,16 +38,30 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css?modules&importLoaders=1&localIdentName=[path]__[name]__[local]__[hash:base64:5]'
+        loaders: [
+          'style',
+          'css?modules&importLoaders=1&localIdentName=[path]__[name]__[local]__[hash:base64:5]',
+          'postcss'
+        ]
+        // loader: ExtractTextPlugin.extract(
+        //   'style',
+        //   [
+        //     'css?modules&importLoaders=1&localIdentName=[path]__[name]__[local]__[hash:base64:5]',
+        //     'postcss'
+        //   ]
+        // )
       }
     ]
   },
   plugins: [
+    // new ExtractTextPlugin('styles.css'),
+    new DashboardPlugin(dashboard.setData),
     new webpack.HotModuleReplacementPlugin(), // if you don't specify `--hot`
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ],
+  postcss: () => [precss, autoprefixer],
   devServer: {
     hot: true,
     port: PORT,
