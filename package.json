@@ -8,7 +8,7 @@
   },
   "files": [
     "bin",
-    "data",
+    "npm",
     "template"
   ],
   "keywords": [
