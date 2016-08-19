@@ -4,7 +4,7 @@
   "description": "Generate a template of React App.",
   "scripts": {
     "test": "echo [TODO]",
-    "lint": "eslint bin"
+    "lint": "eslint ."
   },
   "files": [
     "bin",
@@ -18,7 +18,13 @@
     "generate",
     "scaffolding",
     "babel",
-    "webpack"
+    "webpack",
+    "webpack-dashboard",
+    "webpack-dev-server",
+    "eslint",
+    "ava",
+    "enzyme",
+    "css-modules"
   ],
   "bin": {
     "dish": "./bin/dish.js"

@@ -23,6 +23,46 @@ $ npm test # or npm test:watch
 $ npm run build
 ```
 
+## Directory Structure of the Generated Project
+```
+├── .babelrc
+├── .editorconfig
+├── .eslintignore
+├── .eslintrc
+├── .gitignore
+├── .travis.yml
+├── LICENSE
+├── README.md
+├── index.html
+├── src
+│   ├── common.css
+│   ├── components
+│   │   └── Hero
+│   │       ├── Hero.js
+│   │       ├── hero.style.css
+│   │       └── index.js
+│   └── index.js
+├── test
+│   ├── helpers
+│   │   └── setup-browser-env.js
+│   └── hero.js
+├── webpack.config.js
+└── webpack.production.config.js
+```
+
+## npm start
+Start as development.  
+Default port is 8080.  
+Dish uses [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard) and [webpack-dev-server](https://github.com/webpack/webpack-dev-server).
+
+## npm test
+Test runner is [ava](https://github.com/avajs/ava).
+
+## npm run build
+Build as production.  
+Source codes is compressed by webpack.  
+If you don't want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
+
 ## Tools
 - webpack
   - webpack-dev-server
