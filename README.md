@@ -52,6 +52,7 @@ Dish uses [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboar
 
 ## npm test
 Test runner is [ava](https://github.com/avajs/ava).
+Dish uses enzyme, jsdom and sinon.
 
 ## npm run build
 Build as production.  

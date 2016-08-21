@@ -1,6 +1,5 @@
 'use strict';
 
-const _        = require('lodash');
 const fs       = require('fs');
 const path     = require('path');
 const rc       = require('rc');
@@ -23,7 +22,7 @@ module.exports = (projectName, projectPath) => {
 
   const packageInfo = {
     name: projectName,
-    main: 'src/index.js',
+    main: path.join('src', 'index.js'),
     author: author === '' ? undefined : author,
     version: '0.0.1',
     license: npmrc['init.license'] === undefined ? 'ISC' : npmrc['init.license'],
@@ -31,7 +30,7 @@ module.exports = (projectName, projectPath) => {
   };
 
   fs.writeFileSync(path.join(projectPath, 'package.json'),
-    JSON.stringify(_.merge(packageInfo, tasks, env), null, 2));
+    JSON.stringify(Object.assign(packageInfo, tasks, env), null, 2));
 
   // install template
   install([

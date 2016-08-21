@@ -2,8 +2,8 @@
 
 const fs         = require('fs-extra');
 const path       = require('path');
-const pathExists = require('path-exists');
 const chalk      = require('chalk');
+const pathExists = require('path-exists');
 const npm        = require('./npm');
 
 module.exports = (projectName) => {
