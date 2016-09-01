@@ -25,6 +25,7 @@ $ npm run build
 
 ## Directory Structure of the Generated Project
 ```
+.
 ├── .babelrc
 ├── .editorconfig
 ├── .eslintignore
@@ -35,13 +36,17 @@ $ npm run build
 ├── README.md
 ├── index.html
 ├── src
-│   ├── common.css
 │   ├── components
 │   │   └── Hero
 │   │       ├── Hero.js
 │   │       ├── hero.style.css
 │   │       └── index.js
-│   └── index.js
+│   ├── index.js
+│   └── styles
+│       ├── _mixins.css
+│       ├── _variables.css
+│       └── mixins
+│           └── _hero-background.css
 ├── test
 │   ├── helpers
 │   │   └── setup-browser-env.js
@@ -68,9 +73,8 @@ If you don't want to include the css in js, you can uncomment `extract-text-webp
   - webpack-dev-server
   - webpack-dashboard
 - babel
-  - es2015
+  - latest
   - stage-0
-  - stage-1
 - eslint
 
 ## Frameworks
