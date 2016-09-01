@@ -1,4 +1,5 @@
-$text-color: #3498db;
+@import "../../styles/variables";
+@import "../../styles/mixins/hero-background";
 
 .container {
   border-radius: 10px;
@@ -7,7 +8,7 @@ $text-color: #3498db;
   height: 50vh;
   justify-content: center;
   align-items: center;
-  composes: container from '../../common.css';
+  @mixin hero-background;
 }
 
 .title {
