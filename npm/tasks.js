@@ -1,9 +1,10 @@
 module.exports = {
   scripts: {
-    test: 'ava',
-    'test:watch': 'ava -w',
+    build: 'webpack --config ./webpack.production.config.js',
+    flow: 'flow',
     lint: 'eslint src',
     start: 'webpack-dev-server',
-    build: 'webpack --config ./webpack.production.config.js'
+    test: 'ava',
+    'test:watch': 'ava -w'
   }
 }
