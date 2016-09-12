@@ -30,6 +30,7 @@ $ npm run build
 ├── .editorconfig
 ├── .eslintignore
 ├── .eslintrc
+├── .flowconfig
 ├── .gitignore
 ├── .travis.yml
 ├── LICENSE
@@ -68,6 +69,9 @@ Build as production.
 Source codes is compressed by webpack.  
 If you don't want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
 
+## npm run flow
+Check a type in your code.
+
 ## Tools
 - webpack
   - webpack-dev-server
@@ -76,6 +80,7 @@ If you don't want to include the css in js, you can uncomment `extract-text-webp
   - latest
   - stage-0
 - eslint
+- flow
 
 ## Frameworks
 - react

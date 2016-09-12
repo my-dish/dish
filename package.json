@@ -24,7 +24,8 @@
     "eslint",
     "ava",
     "enzyme",
-    "css-modules"
+    "css-modules",
+    "flow"
   ],
   "bin": {
     "dish": "./bin/dish.js"
