@@ -21,7 +21,7 @@ module.exports = (projectName) => {
     npm(projectName, project);
 
     console.log(chalk.cyan('Installed from npmjs.'));
-    console.log(chalk.cyan('Making a stage.'));
+    console.log(chalk.cyan('Making the stage.'));
 
     fs.copySync(path.resolve('node_modules', 'my-dish', 'template'), '.');
 
@@ -29,7 +29,7 @@ module.exports = (projectName) => {
     console.log(`$ cd ${projectName}`);
     console.log('$ npm start');
     console.log();
-    console.log(chalk.green('Have a nice time :)'))
+    console.log(chalk.green('Have a nice time :)'));
   }
   else {
     console.error(chalk.red(`Error: ${projectName} already exists ;(`));

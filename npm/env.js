@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   ava: {
     files: [
@@ -12,4 +14,4 @@ module.exports = {
     ],
     babel: 'inherit'
   }
-}
+};

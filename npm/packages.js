@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   dependencies: [
     'react',
@@ -32,4 +34,4 @@ module.exports = {
     'webpack-dashboard',
     'webpack-dev-server'
   ]
-}
+};

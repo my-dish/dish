@@ -3,7 +3,7 @@
   "version": "0.4.3",
   "description": "Generate a template of React App.",
   "scripts": {
-    "test": "echo [TODO]",
+    "test": "ava",
     "lint": "eslint ."
   },
   "files": [
@@ -52,7 +52,8 @@
   },
   "devDependencies": {
     "ava": "^0.16.0",
-    "eslint": "^3.2.2"
+    "eslint": "^3.2.2",
+    "pify": "^2.3.0"
   },
   "ava": {
     "files": [

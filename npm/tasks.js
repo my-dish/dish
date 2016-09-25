@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   scripts: {
     build: 'webpack --config ./webpack.production.config.js',
@@ -7,4 +9,4 @@ module.exports = {
     test: 'ava',
     'test:watch': 'ava -w'
   }
-}
+};
