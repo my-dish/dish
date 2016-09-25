@@ -3,7 +3,7 @@ import pify from 'pify';
 import {execFile} from 'child_process';
 import packages from '../package.json';
 
-test('should return help', async (t) => {
+test('should return version number', async (t) => {
   const versionLabel = `Version: ${packages.version}`;
   const stdout       = await pify(execFile)('../bin/dish.js', ['-v']);
 
