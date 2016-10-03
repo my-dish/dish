@@ -1,12 +1,13 @@
 'use strict';
 
-const path              = require('path');
-const precss            = require('precss');
-const webpack           = require('webpack');
-const Dashboard         = require('webpack-dashboard');
-const autoprefixer      = require('autoprefixer');
-const DashboardPlugin   = require('webpack-dashboard/plugin');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path                    = require('path');
+const precss                  = require('precss');
+const webpack                 = require('webpack');
+const Dashboard               = require('webpack-dashboard');
+const autoprefixer            = require('autoprefixer');
+const DashboardPlugin         = require('webpack-dashboard/plugin');
+const FlowStatusWebpackPlugin = require('flow-status-webpack-plugin');
+// const ExtractTextPlugin       = require('extract-text-webpack-plugin');
 
 const PORT      = 8080;
 const dashboard = new Dashboard();
@@ -59,6 +60,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(), // if you don't specify `--hot`
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    }),
+    new webpack.NoErrorsPlugin(),
+    new FlowStatusWebpackPlugin({
+      failOnError: true
     })
   ],
   postcss: () => [precss, autoprefixer],
