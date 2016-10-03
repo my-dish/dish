@@ -14,9 +14,7 @@ const dashboard = new Dashboard();
 
 module.exports = {
   entry: [
-    path.join(__dirname, 'src', 'index.js'),
-    `webpack-dev-server/client?http://0.0.0.0:${PORT}`,
-    'webpack/hot/only-dev-server',
+    path.join(__dirname, 'src', 'index.js')
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -33,7 +31,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'react-hot!babel',
+        loader: 'babel',
         include: path.join(__dirname, 'src'),
         exclude: path.join(__dirname, 'node_modules')
       },

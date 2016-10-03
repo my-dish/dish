@@ -6,6 +6,7 @@
   ],
   "plugins": [
     "syntax-flow",
+    "react-hot-loader/babel",
     "transform-flow-strip-types"
   ]
 }
