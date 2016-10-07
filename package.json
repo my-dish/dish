@@ -1,6 +1,6 @@
 {
   "name": "my-dish",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "description": "Generate a template of React App.",
   "scripts": {
     "test": "ava",
