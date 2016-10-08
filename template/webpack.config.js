@@ -68,6 +68,7 @@ module.exports = {
   devServer: {
     hot: true,
     port: PORT,
+    quiet: true,
     cache: true,
     inline: true,
     colors: true,
