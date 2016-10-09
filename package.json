@@ -4,6 +4,7 @@
   "description": "Generate a template of React App.",
   "scripts": {
     "test": "ava",
+    "test:watch": "ava -w",
     "lint": "eslint ."
   },
   "files": [
