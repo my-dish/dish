@@ -5,7 +5,8 @@
   "scripts": {
     "test": "ava",
     "test:watch": "ava -w",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "files": [
     "bin",
@@ -54,6 +55,7 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "babel-eslint": "^7.0.0",
+    "conventional-changelog-cli": "^1.2.0",
     "eslint": "^3.2.2",
     "pify": "^2.3.0"
   },

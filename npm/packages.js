@@ -17,6 +17,7 @@ module.exports = {
     'babel-preset-stage-0',
     'babel-plugin-syntax-flow',
     'babel-plugin-transform-flow-strip-types',
+    'conventional-changelog-cli',
     'css-loader',
     'enzyme',
     'eslint',
