@@ -21,23 +21,31 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/dist/'
   },
+  node: {
+    net: 'empty',
+    fs: 'empty'
+  },
   cache: true,
   target: 'web',
   devtool: 'cheap-module-eval-source-map',
   resolve: {
-    extensions: ['', '.js', '.css']
+    modules: ['node_modules'],
+    mainFields: ['main'],
+    extensions: ['.js', '.css'],
+    enforceExtension: false,
+    descriptionFiles: ['package.json']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        use: 'babel',
         include: path.join(__dirname, 'src'),
         exclude: path.join(__dirname, 'node_modules')
       },
       {
         test: /\.css$/,
-        loaders: [
+        use: [
           'style',
           'css?modules&importLoaders=1&localIdentName=[path]__[name]__[local]__[hash:base64:5]',
           'postcss'
@@ -62,9 +70,13 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new FlowStatusWebpackPlugin({
       failOnError: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: () => [precss, autoprefixer]
+      }
     })
   ],
-  postcss: () => [precss, autoprefixer],
   devServer: {
     hot: true,
     port: PORT,

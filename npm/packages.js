@@ -33,8 +33,8 @@ module.exports = {
     'style-loader',
     'precss',
     'postcss-loader',
-    'webpack',
+    'webpack@2.1.0-beta.25',
     'webpack-dashboard',
-    'webpack-dev-server'
+    'webpack-dev-server@2.1.0-beta.8'
   ]
 };
