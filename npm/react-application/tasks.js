@@ -8,6 +8,6 @@ module.exports = {
     lint: 'eslint src',
     start: 'webpack-dev-server',
     test: 'ava',
-    'test:watch': 'ava -w',
+    'test:watch': 'ava -w'
   }
 };
