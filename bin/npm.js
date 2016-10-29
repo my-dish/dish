@@ -4,11 +4,9 @@ const fs       = require('fs');
 const path     = require('path');
 const rc       = require('rc');
 const spawn    = require('cross-spawn');
-const env      = require('../npm/env');
-const tasks    = require('../npm/tasks');
-const packages = require('../npm/packages');
+const router   = require('./router');
 
-module.exports = (projectName, projectPath) => {
+module.exports = (projectName, projectPath, templateType) => {
   const npmrc  = rc('npm');
   const author = (() => {
     const str = [];
@@ -29,8 +27,10 @@ module.exports = (projectName, projectPath) => {
     description: '',
   };
 
+  const setting = router(templateType).npm;
+
   fs.writeFileSync(path.join(projectPath, 'package.json'),
-    JSON.stringify(Object.assign(packageInfo, tasks, env), null, 2));
+    JSON.stringify(Object.assign(packageInfo, setting.tasks, setting.env), null, 2));
 
   // install template
   install([
@@ -42,14 +42,14 @@ module.exports = (projectName, projectPath) => {
   install([
     'install',
     '-S',
-    ...packages.dependencies
+    ...setting.packages.dependencies
   ]);
 
   // install devDependencies
   install([
     'install',
     '-D',
-    ...packages.devDependencies
+    ...setting.packages.devDependencies
   ]);
 };
 
