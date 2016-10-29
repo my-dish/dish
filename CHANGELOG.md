@@ -1,3 +1,13 @@
+<a name="1.0.0-beta.3"></a>
+# [1.0.0-beta.3](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2016-10-29)
+
+
+### Features
+
+* **npm:** Set main path in package.json ([f8a2220](https://github.com/abouthiroppy/dish/commit/f8a2220))
+
+
+
 <a name="1.0.0-beta.2"></a>
 # [1.0.0-beta.2](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2016-10-29)
 
