@@ -18,7 +18,14 @@ $ npm start or npm run build
 ```
 And then open `localhost:8080`.  
 
+## Included templates
+- Web Application with React
+- React Library
+
+![](./images/img1.png)
+
 ## Directory Structure of the Generated Project
+### Web Application with React
 ```
 .
 ├── .babelrc
@@ -51,24 +58,12 @@ And then open `localhost:8080`.
 └── webpack.production.config.js
 ```
 
-## npm start
-Start as development.  
-Default port is 8080.  
-Dish uses [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard) and [webpack-dev-server](https://github.com/webpack/webpack-dev-server).
+### React Library
+```
+```
 
-## npm test
-Test runner is [ava](https://github.com/avajs/ava).
-Dish uses enzyme, jsdom and sinon.
-
-## npm run build
-Build as production.  
-Source codes is compressed by webpack.  
-If you don't want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
-
-## npm run flow
-Check a type in your code.
-
-## Tools
+## Web Application with React
+### Tools
 - webpack
   - webpack-dev-server
   - webpack-dashboard
