@@ -7,6 +7,7 @@ module.exports = (templateType) => {
       return {
         id: 0,
         npm: {
+          main    : 'src',
           env     : require('../npm/react-application/env'),
           tasks   : require('../npm/react-application/tasks'),
           packages: require('../npm/react-application/packages')
@@ -18,6 +19,7 @@ module.exports = (templateType) => {
       return {
         id: 1,
         npm: {
+          main    : 'lib',
           env     : require('../npm/react-library/env'),
           tasks   : require('../npm/react-library/tasks'),
           packages: require('../npm/react-library/packages')

@@ -7,7 +7,9 @@ const spawn    = require('cross-spawn');
 const router   = require('./router');
 
 module.exports = (projectName, projectPath, templateType) => {
-  const npmrc  = rc('npm');
+  const npmrc   = rc('npm');
+  const setting = router(templateType).npm;
+
   const author = (() => {
     const str = [];
 
@@ -20,14 +22,12 @@ module.exports = (projectName, projectPath, templateType) => {
 
   const packageInfo = {
     name: projectName,
-    main: path.join('src', 'index.js'),
+    main: path.join(setting.main, 'index.js'),
     author: author === '' ? undefined : author,
     version: '0.0.1',
     license: npmrc['init.license'] === undefined ? 'ISC' : npmrc['init.license'],
     description: '',
   };
-
-  const setting = router(templateType).npm;
 
   fs.writeFileSync(path.join(projectPath, 'package.json'),
     JSON.stringify(Object.assign(packageInfo, setting.tasks, setting.env), null, 2));

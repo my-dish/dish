@@ -7,11 +7,6 @@ module.exports = {
     ],
     concurrency: 5,
     failFast: true,
-    tap: true,
-    require: [
-      'ignore-styles',
-      'babel-register'
-    ],
-    babel: 'inherit'
+    tap: true
   }
 };
