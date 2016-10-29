@@ -7,6 +7,8 @@ module.exports = {
   ],
   devDependencies: [
     'ava',
-    'conventional-changelog-cli'
+    'conventional-changelog-cli',
+    'eslint',
+    'eslint-plugin-react'
   ]
 };

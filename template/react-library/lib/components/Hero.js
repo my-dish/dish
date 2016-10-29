@@ -1,7 +1,7 @@
 'use strict';
 
 var React  = require('react');
-// var assign = require('lodash.assign');
+var assign = require('lodash.assign');
 
 var h1  = React.DOM.h1;
 var div = React.DOM.div;

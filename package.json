@@ -1,7 +1,7 @@
 {
   "name": "my-dish",
   "version": "1.0.0-beta.1",
-  "description": "Generate a template of React App.",
+  "description": "Generates the templates of React App. Includes `web application with React` and `React library`.",
   "scripts": {
     "test": "ava",
     "test:watch": "ava -w",

@@ -14,7 +14,7 @@
 $ npm install -g my-dish
 $ dish <project-directory>
 $ cd <project-directory>
-$ npm start or npm run build
+$ enjoy it!
 ```
 And then open `localhost:8080`.  
 
@@ -60,6 +60,19 @@ And then open `localhost:8080`.
 
 ### React Library
 ```
+.
+├── LICENSE
+├── README.md
+├── examples
+│   ├── index.html
+│   ├── main.js
+│   ├── package.json
+│   └── webpack.config.js
+├── lib
+│   ├── components
+│   │   └── Hero.js
+│   └── index.js
+└── package.json
 ```
 
 ## Web Application with React

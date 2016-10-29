@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <strong>template for frontend application</strong>
+  <strong>template for React library</strong>
 </div>
 
 ## Tasks
@@ -25,6 +25,19 @@ $ npm run lint
 
 ## Directory Structure of the Generated Project
 ```
+.
+├── LICENSE
+├── README.md
+├── examples
+│   ├── index.html
+│   ├── main.js
+│   ├── package.json
+│   └── webpack.config.js
+├── lib
+│   ├── components
+│   │   └── Hero.js
+│   └── index.js
+└── package.json
 ```
 
 ## npm test
