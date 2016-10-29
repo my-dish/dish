@@ -1,3 +1,8 @@
+<a name="1.0.0-beta.2"></a>
+# [1.0.0-beta.2](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2016-10-29)
+
+
+
 <a name="1.0.0-beta.1"></a>
 # [1.0.0-beta.1](https://github.com/abouthiroppy/dish/compare/v0.4.4...v1.0.0-beta.1) (2016-10-29)
 
