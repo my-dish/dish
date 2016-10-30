@@ -26,5 +26,17 @@ module.exports = (templateType) => {
         },
         templatePath: 'react-library'
       };
+    case 2:
+    case 'Command Line Tool':
+      return {
+        id: 2,
+        npm: {
+          env     : require('../npm/cli/env'),
+          tasks   : require('../npm/cli/tasks'),
+          setting : require('../npm/cli/setting'),
+          packages: require('../npm/cli/packages')
+        },
+        templatePath: 'cli'
+      };
   }
 }
