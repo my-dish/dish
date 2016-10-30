@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "no-console": 1
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+  },
+  "extends": "eslint:recommended"
+}
