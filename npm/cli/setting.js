@@ -18,6 +18,11 @@ module.exports = {
       bin: {
         dish: 'bin/index.js'
       }
+    },
+    {
+      engines: {
+        node: '>=4'
+      }
     }
   ]
 };
