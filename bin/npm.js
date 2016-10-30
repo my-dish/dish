@@ -7,8 +7,8 @@ const spawn    = require('cross-spawn');
 const router   = require('./router');
 
 module.exports = (projectName, projectPath, templateType) => {
-  const npmrc   = rc('npm');
-  const setting = router(templateType).npm;
+  const npm    = router(templateType).npm;
+  const npmrc  = rc('npm');
 
   const author = (() => {
     const str = [];
@@ -22,15 +22,17 @@ module.exports = (projectName, projectPath, templateType) => {
 
   const packageInfo = {
     name: projectName,
-    main: path.join(setting.main, 'index.js'),
+    main: path.join(npm.setting.main, 'index.js'),
     author: author === '' ? undefined : author,
     version: '0.0.1',
     license: npmrc['init.license'] === undefined ? 'ISC' : npmrc['init.license'],
-    description: '',
+    description: ''
   };
 
+  npm.setting.key.forEach((e) => packageInfo[Object.keys(e)[0]] = e[Object.keys(e)[0]]);
+
   fs.writeFileSync(path.join(projectPath, 'package.json'),
-    JSON.stringify(Object.assign(packageInfo, setting.tasks, setting.env), null, 2));
+    JSON.stringify(Object.assign(packageInfo, npm.tasks, npm.env), null, 2));
 
   // install template
   install([
@@ -42,14 +44,14 @@ module.exports = (projectName, projectPath, templateType) => {
   install([
     'install',
     '-S',
-    ...setting.packages.dependencies
+    ...npm.packages.dependencies
   ]);
 
   // install devDependencies
   install([
     'install',
     '-D',
-    ...setting.packages.devDependencies
+    ...npm.packages.devDependencies
   ]);
 };
 

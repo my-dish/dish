@@ -7,9 +7,9 @@ module.exports = (templateType) => {
       return {
         id: 0,
         npm: {
-          main    : 'src',
           env     : require('../npm/react-application/env'),
           tasks   : require('../npm/react-application/tasks'),
+          setting : require('../npm/react-application/setting'),
           packages: require('../npm/react-application/packages')
         },
         templatePath: 'react-application'
@@ -19,9 +19,9 @@ module.exports = (templateType) => {
       return {
         id: 1,
         npm: {
-          main    : 'lib',
           env     : require('../npm/react-library/env'),
           tasks   : require('../npm/react-library/tasks'),
+          setting : require('../npm/react-library/setting'),
           packages: require('../npm/react-library/packages')
         },
         templatePath: 'react-library'
