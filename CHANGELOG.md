@@ -1,5 +1,10 @@
-<a name="1.0.0-beta.5"></a>
-# [1.0.0-beta.5](https://github.com/abouthiroppy/dish/compare/v0.5.1...v1.0.0-beta.5) (2016-10-30)
+<a name="1.0.0-beta.6"></a>
+# [1.0.0-beta.6](https://github.com/abouthiroppy/dish/compare/v0.5.1...v1.0.0-beta.6) (2016-10-30)
+
+
+### Bug Fixes
+
+* **cli-template:** fix test error and add babel-eslint ([bd22f28](https://github.com/abouthiroppy/dish/commit/bd22f28))
 
 
 ### Features
@@ -7,6 +12,7 @@
 * create directories for npm, template ([420c7cc](https://github.com/abouthiroppy/dish/commit/420c7cc))
 * **bin:** allow to choose plural templates ([4c84a56](https://github.com/abouthiroppy/dish/commit/4c84a56))
 * **cli-template:** add cli template ([341a089](https://github.com/abouthiroppy/dish/commit/341a089))
+* **npm:** add engines to cli-template ([4a549b0](https://github.com/abouthiroppy/dish/commit/4a549b0))
 * **npm:** add npm field ([ea60dc7](https://github.com/abouthiroppy/dish/commit/ea60dc7))
 * **npm:** add npm settings for react-library ([48c71e1](https://github.com/abouthiroppy/dish/commit/48c71e1))
 * **npm:** Set main path in package.json ([f8a2220](https://github.com/abouthiroppy/dish/commit/f8a2220))
