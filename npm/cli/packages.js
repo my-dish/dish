@@ -5,6 +5,7 @@ module.exports = {
   ],
   devDependencies: [
     'ava',
+    'babel-eslint',
     'conventional-changelog-cli',
     'eslint',
     'pify'

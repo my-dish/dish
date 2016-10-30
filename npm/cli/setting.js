@@ -1,11 +1,11 @@
 'use strict';
 
 module.exports = {
-  main: 'lib',
+  main: 'bin',
   key: [
     {
       files: [
-        'lib'
+        'bin'
       ]
     },
     {
@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       bin: {
-        dish: 'lib/index.js'
+        dish: 'bin/index.js'
       }
     }
   ]
