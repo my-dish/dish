@@ -1,12 +1,13 @@
 {
   "name": "my-dish",
   "version": "1.0.0-beta.6",
-  "description": "Generates the templates of React App. Includes `web application with React` and `React library`.",
+  "description": "Generates various templates. Includes `web application with React`, `React library`, `command line tool`.",
   "scripts": {
-    "test": "ava",
+    "test": "nyc ava",
     "test:watch": "ava -w",
     "lint": "eslint .",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "postcover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "files": [
     "bin",
@@ -58,6 +59,7 @@
     "babel-eslint": "^7.0.0",
     "conventional-changelog-cli": "^1.2.0",
     "eslint": "^3.2.2",
+    "nyc": "^8.3.2",
     "pify": "^2.3.0"
   },
   "ava": {
