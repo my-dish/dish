@@ -21,6 +21,7 @@ And then open `localhost:8080`.
 ## Included templates
 - Web Application with React
 - React Library
+- Command Line Tool
 
 ![](./images/img1.png)
 
@@ -73,6 +74,17 @@ And then open `localhost:8080`.
 │   │   └── Hero.js
 │   └── index.js
 └── package.json
+```
+
+### Command Line Tool
+```
+.
+├── LICENSE
+├── README.md
+├── lib
+│   └── index.js
+└── test
+    └── cli.js
 ```
 
 ## Web Application with React

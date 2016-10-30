@@ -25,7 +25,8 @@ inquirer.prompt([
     message: 'Which do you want to use?',
     choices: [
       'Web Application with React',
-      'React Library'
+      'React Library',
+      'Command Line Tool'
     ]
   }
 ]).then((ans) => {
