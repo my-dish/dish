@@ -38,5 +38,17 @@ module.exports = (templateType) => {
         },
         templatePath: 'cli'
       };
+    case 4:
+    case 'Web Application with React and Redux':
+      return {
+        id: 4,
+        npm: {
+          env     : require('../npm/react-redux-application/env'),
+          tasks   : require('../npm/react-redux-application/tasks'),
+          setting : require('../npm/react-redux-application/setting'),
+          packages: require('../npm/react-redux-application/packages')
+        },
+        templatePath: 'react-redux-application'
+      };
   }
 }
