@@ -14,6 +14,7 @@ const dashboard = new Dashboard();
 
 module.exports = {
   entry: [
+    'react-hot-loader/patch',
     path.join(__dirname, 'src', 'index.js')
   ],
   output: {

@@ -42,6 +42,7 @@ module.exports = (projectName, templateType, testDirPath) => {
 
 function debugMode(templatePath, testDirPath) {
   const base = testDirPath ? testDirPath : '.';
+
   fs.copySync(path.join(__dirname, '..', 'template', 'common'), base);
   fs.copySync(path.join(__dirname, '..', 'template', templatePath), base);
 }
