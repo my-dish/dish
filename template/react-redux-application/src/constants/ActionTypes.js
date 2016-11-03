@@ -1,1 +1,3 @@
-export const UPDATE_NAME = 'UPDATE_NAME';
+// @flow
+
+export const UPDATE_NAME: string = 'UPDATE_NAME';

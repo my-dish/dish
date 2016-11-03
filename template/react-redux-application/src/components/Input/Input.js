@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styles from './input.style.css';
 
@@ -5,14 +7,6 @@ class Input extends React.Component {
   static propTypes = {
     updateName: React.PropTypes.func.isRequired
   };
-
-  constructor() {
-    super();
-
-    this.state = {
-      disabled: false
-    }
-  }
 
   render() {
     const {

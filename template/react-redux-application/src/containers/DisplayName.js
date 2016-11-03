@@ -1,8 +1,20 @@
+// @flow
+
+import type {AllStates} from '../types';
+
 import {connect} from 'react-redux';
-import * as Actions from '../actions';
 import Label from '../components/Label';
 
-const mapStateToProps = (state) => {
+type State = {
+  name: string
+};
+
+type Dispatch = {};
+
+/**
+ * @param {Allstates} state
+ */
+const mapStateToProps: Object = (state: AllStates): State => {
   const {
     users
   } = state;
@@ -12,7 +24,11 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, props) => {
+/**
+ * @param {Function} dispatch
+ * @param {Object} props
+ */
+const mapDispatchToProps: Object = (): Dispatch => {
   return {};
 }
 

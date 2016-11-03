@@ -1,6 +1,10 @@
+// @flow
+
 import {combineReducers} from 'redux';
 import users from './users';
 
-export default combineReducers({
+const reducer = combineReducers({
   users
 });
+
+export default reducer;

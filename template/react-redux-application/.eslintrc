@@ -1,7 +1,8 @@
 {
   "parser": "babel-eslint",
   "rules": {
-    "react/jsx-uses-vars": 1
+    "react/jsx-uses-vars": 1,
+    "react/jsx-uses-react": 1
   },
   "env": {
     "es6": true,

@@ -27,6 +27,7 @@ module.exports = {
     'eslint-plugin-react',
     'extract-text-webpack-plugin',
     'flow-bin',
+    'flow-typed',
     'flow-status-webpack-plugin',
     'identity-obj-proxy',
     'jest',

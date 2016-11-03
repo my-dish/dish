@@ -1,12 +1,16 @@
-import * as ActionTypes from '../constants/ActionTypes';
+// @flow
 
-const initialState = {
+import type {Users} from '../types';
+
+import * as types from '../constants/ActionTypes';
+
+const initialState: Object = {
   name: ':)'
 };
 
-export default (state = initialState, action) => {
+const reducer = (state: Users = initialState, action: Object): Users => {
   switch (action.type) {
-    case ActionTypes.UPDATE_NAME:
+    case types.UPDATE_NAME:
       return Object.assign({}, state, {
         name: action.name
       });
@@ -14,3 +18,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default reducer;

@@ -8,6 +8,7 @@ module.exports = {
     lint: 'eslint src',
     start: 'webpack-dev-server',
     test: 'jest',
-    'test:watch': 'jest --watch'
+    'test:watch': 'jest --watch',
+    postinstall: 'flow-typed install'
   }
 };

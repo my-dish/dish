@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import FilterName from '../containers/FilterName';
 import DisplayName from '../containers/DisplayName';

@@ -1,1 +1,1 @@
-export checkName from './check-name';
+export checkName from './checkName';

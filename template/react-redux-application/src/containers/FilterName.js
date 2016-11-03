@@ -1,19 +1,33 @@
+// @flow
+
 import {connect} from 'react-redux';
-import * as Actions from '../actions';
+import * as actions from '../actions';
 import Input from '../components/Input';
 
-const mapStateToProps = (state) => {
-  return {
-  };
+type State = {};
+
+type Dispatch = {
+  updateName: Function
 };
 
-const mapDispatchToProps = (dispatch, props) => (
-  {
-    updateName: (name) => {
-      dispatch(Actions.updateName(name));
+/**
+ * @param {Allstates} state
+ */
+const mapStateToProps: Object= (): State => {
+  return {};
+};
+
+/**
+ * @param {Function} dispatch
+ * @param {Object} props
+ */
+const mapDispatchToProps: Object = (dispatch): Dispatch => {
+  return {
+    updateName: (name: string) => {
+      dispatch(actions.updateName(name));
     }
-  }
-);
+  };
+}
 
 export default connect(
   mapStateToProps,
