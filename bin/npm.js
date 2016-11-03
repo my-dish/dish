@@ -34,25 +34,28 @@ module.exports = (projectName, projectPath, templateType) => {
   fs.writeFileSync(path.join(projectPath, 'package.json'),
     JSON.stringify(Object.assign(packageInfo, npm.tasks, npm.env), null, 2));
 
-  // install template
-  install([
-    'install',
-    'my-dish'
-  ]);
+  if (process.env.NODE_ENV !== 'test') {
 
-  // install dependencies
-  install([
-    'install',
-    '-S',
-    ...npm.packages.dependencies
-  ]);
+    // install template
+    install([
+      'install',
+      'my-dish'
+    ]);
 
-  // install devDependencies
-  install([
-    'install',
-    '-D',
-    ...npm.packages.devDependencies
-  ]);
+    // install dependencies
+    install([
+      'install',
+      '-S',
+      ...npm.packages.dependencies
+    ]);
+
+    // install devDependencies
+    install([
+      'install',
+      '-D',
+      ...npm.packages.devDependencies
+    ]);
+  }
 };
 
 function install(args) {
