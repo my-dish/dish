@@ -37,8 +37,8 @@
     "node": ">=4"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abouthiroppy/dish.git"
+    "url": "git+https://github.com/abouthiroppy/dish.git",
+    "type": "git"
   },
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
   "license": "MIT",
