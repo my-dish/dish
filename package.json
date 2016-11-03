@@ -3,8 +3,8 @@
   "version": "1.0.0-beta.6",
   "description": "Generates various templates. Includes `web application with React`, `React library`, `command line tool`.",
   "scripts": {
-    "test": "nyc ava",
-    "test:watch": "ava -w",
+    "test": "NODE_ENV=test nyc ava",
+    "test:watch": "NODE_ENV=test ava -w",
     "lint": "eslint .",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "postcover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
