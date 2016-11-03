@@ -7,7 +7,7 @@ module.exports = {
     flow: 'flow',
     lint: 'eslint src',
     start: 'webpack-dev-server',
-    test: 'ava',
-    'test:watch': 'ava -w'
+    test: 'jest',
+    'test:watch': 'jest --watch'
   }
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './input.style';
+import styles from './input.style.css';
 
 class Input extends React.Component {
   static propTypes = {

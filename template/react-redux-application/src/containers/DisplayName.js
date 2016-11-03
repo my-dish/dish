@@ -4,11 +4,11 @@ import Label from '../components/Label';
 
 const mapStateToProps = (state) => {
   const {
-    user
+    users
   } = state;
 
   return {
-    name: user.name
+    name: users.name
   };
 };
 

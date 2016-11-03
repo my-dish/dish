@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import styles from './label.style';
+import styles from './label.style.css';
 
 class Label extends React.Component {
   static propTypes = {
