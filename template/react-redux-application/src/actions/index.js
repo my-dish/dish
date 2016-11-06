@@ -1,10 +1,10 @@
 // @flow
 
-import * as types from '../constants/ActionTypes';
+import type {UsersAction} from '../types';
 
-export const updateName = (name: string): Object => {
+export const updateName = (name: string): UsersAction => {
   return {
-    type: types.UPDATE_NAME,
+    type: 'UPDATE_NAME',
     name
   };
 };

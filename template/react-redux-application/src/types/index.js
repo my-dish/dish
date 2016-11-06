@@ -8,3 +8,8 @@ export type Users = {
 export type AllStates = {
   users: Users
 };
+
+export type UsersAction = {
+  type: 'UPDATE_NAME',
+  name: string
+};
