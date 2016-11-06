@@ -1,25 +1,24 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import Root from '../../src/containers';
+import FilterName from '../../src/containers/FilterName';
 import DisplayName from '../../src/containers/DisplayName';
 
-const createFakeState = (fakeData) => ({
-		default() {},
-		subscribe() {},
-		dispatch() {},
-		getState() {
-			return fakeData;
-		}
+const createFakeStore = (state) => ({
+  default: () => {},
+  dispatch: () => {},
+  getState: () => ({...state}),
+  subscribe: () => {}
 });
 
-xit('Root container', () => {
+describe('Root container', () => {
   let wrapper;
 
 	beforeEach(() => {
-		const store = createFakeState({});
+		const store = createFakeStore({});
 
-		wrapper = shallow(
+		wrapper = mount(
 			<Provider store={store}>
 				<Root />
 			</Provider>
@@ -27,7 +26,7 @@ xit('Root container', () => {
 	});
 
   it('should render self', () => {
-    // console.log(wrapper.find('Root'))
-    // console.log(wrapper.contains(<DisplayName />))
+    expect(wrapper.contains(<FilterName />)).toEqual(true);
+    expect(wrapper.contains(<DisplayName />)).toEqual(true);
 	});
 });

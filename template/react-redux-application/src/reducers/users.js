@@ -14,6 +14,7 @@ const reducer = (state: Users = initialState, action: UsersAction) => {
       });
      default:
        (action: empty);
+       return state;
   }
 };
 

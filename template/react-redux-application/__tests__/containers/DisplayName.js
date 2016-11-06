@@ -4,11 +4,11 @@ import {mount} from 'enzyme';
 import DisplayName from '../../src/containers/DisplayName';
 import Label from '../../src/components/Label';
 
-const storeFake = (state) => ({
+const createFakeStore = (state) => ({
   default: () => {},
-  subscribe: () => {},
   dispatch: () => {},
-  getState: () => ({...state})
+  getState: () => ({...state}),
+  subscribe: () => {}
 });
 
 describe('DisplayName component', () => {
@@ -16,7 +16,7 @@ describe('DisplayName component', () => {
   let wrapper;
 
   beforeEach(() => {
-    const store = storeFake({
+    const store = createFakeStore({
       users: {
         name: 'testtest'
       }

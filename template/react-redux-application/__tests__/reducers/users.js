@@ -1,5 +1,4 @@
 import reducer from '../../src/reducers/users';
-import * as ActionTypes from '../../src/constants/ActionTypes';
 
 describe('users reducer', () => {
   it('should return the initial state', () => {
@@ -13,7 +12,7 @@ describe('users reducer', () => {
   it('should handle UPDATE_NAME', () => {
     expect(
       reducer([], {
-        type: ActionTypes.UPDATE_NAME,
+        type: 'UPDATE_NAME',
         name: 'testtest'
       })
     ).toEqual({

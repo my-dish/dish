@@ -30,7 +30,7 @@ describe('Input component', () => {
       }
     });
 
-    expect(props.updateName.mock.calls.length).toBe(1);
+    expect(props.updateName.mock.calls.length).toEqual(1);
     expect(props.updateName.mock.calls[0][0]).toEqual('testtest');
   });
 });

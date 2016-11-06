@@ -4,19 +4,18 @@ import {mount} from 'enzyme';
 import FilterName from '../../src/containers/FilterName';
 import Input from '../../src/components/Input';
 
-const storeFake = (state) => ({
- default: () => {},
-   subscribe: () => {},
-   dispatch: () => {},
-   getState: () => ({...state})
+const createFakeStore = (state) => ({
+  default: () => {},
+  dispatch: () => {},
+  getState: () => ({...state}),
+  subscribe: () => {}
 });
 
 describe('FilterName component', () => {
   let wrapper;
 
   beforeEach(() => {
-    const store = storeFake({
-    });
+    const store = createFakeStore({});
 
     wrapper = mount(
       <Provider store={store}>
@@ -32,7 +31,7 @@ describe('FilterName component', () => {
     expect(container.find(Input).length).toEqual(1);
 
     const input = container.find(Input);
-    expect(Reflect.has(input.props(), 'updateName')).toBe(true);
+    expect(Reflect.has(input.props(), 'updateName')).toEqual(true);
   });
 
   it('should perform updateName', () => {

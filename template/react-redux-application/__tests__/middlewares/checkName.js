@@ -1,4 +1,3 @@
-import * as ActionTypes from '../../src/constants/ActionTypes';
 import checkName from '../../src/middlewares/checkName';
 
 // [common file]
@@ -21,7 +20,7 @@ const dispatchWithStoreOf = (storeData, action) => {
 describe('check-name middleware', () => {
   it('should dispatch if store is empty', () => {
     const action = {
-      type: ActionTypes.UPDATE_NAME,
+      type: 'UPDATE_NAME',
       name: 'test'
     };
 
@@ -31,14 +30,14 @@ describe('check-name middleware', () => {
   // [wip]
   it('should not dispatch if store already has type', () => {
     const action = {
-      type: ActionTypes.UPDATE_NAME,
+      type: 'UPDATE_NAME',
       name: 'test'
     }
 
     expect(
       dispatchWithStoreOf({
-        [ActionTypes.UPDATE_NAME]: 'test'
+        UPDATE_NAME: 'test'
       }, action)
-    ).toBe(action);
+    ).toEqual(action);
   });
 });
