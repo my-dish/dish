@@ -2,11 +2,13 @@
 
 module.exports = {
   dependencies: [
+    'axios',
     'immutable',
     'react',
     'react-dom',
     'react-redux',
-    'redux'
+    'redux',
+    'redux-saga'
   ],
   devDependencies: [
     'autoprefixer',
@@ -24,6 +26,7 @@ module.exports = {
     'css-loader',
     'enzyme',
     'eslint',
+    'eslint-plugin-flowtype',
     'eslint-plugin-react',
     'extract-text-webpack-plugin',
     'flow-bin',

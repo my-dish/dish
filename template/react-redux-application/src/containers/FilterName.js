@@ -13,7 +13,7 @@ type Dispatch = {
 /**
  * @param {Allstates} state
  */
-const mapStateToProps: Object= (): State => {
+const mapStateToProps: Object = (): State => {
   return {};
 };
 
@@ -21,7 +21,7 @@ const mapStateToProps: Object= (): State => {
  * @param {Function} dispatch
  * @param {Object} props
  */
-const mapDispatchToProps: Object = (dispatch): Dispatch => {
+const mapDispatchToProps: Function = (dispatch): Dispatch => {
   return {
     updateName: (name: string) => {
       dispatch(actions.updateName(name));

@@ -28,7 +28,7 @@ const mapStateToProps: Object = (state: AllStates): State => {
  * @param {Function} dispatch
  * @param {Object} props
  */
-const mapDispatchToProps: Object = (): Dispatch => {
+const mapDispatchToProps: Function = (): Dispatch => {
   return {};
 }
 

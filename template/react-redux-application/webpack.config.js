@@ -12,8 +12,11 @@ const FlowStatusWebpackPlugin = require('flow-status-webpack-plugin');
 const PORT      = 8080;
 const dashboard = new Dashboard();
 
+require('babel-polyfill');
+
 module.exports = {
   entry: [
+    'babel-polyfill',
     'react-hot-loader/patch',
     path.join(__dirname, 'src', 'index.js')
   ],
