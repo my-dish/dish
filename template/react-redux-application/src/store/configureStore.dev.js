@@ -32,6 +32,6 @@ const configureStore = (initialState?: Object) => {
 
   saga.run(mySaga);
   return store;
-}
+};
 
 export default configureStore;
