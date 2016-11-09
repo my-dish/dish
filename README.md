@@ -8,6 +8,7 @@
 
 [![Build Status](https://travis-ci.org/abouthiroppy/dish.svg?branch=master)](https://travis-ci.org/abouthiroppy/dish)
 [![codecov](https://codecov.io/gh/abouthiroppy/dish/branch/master/graph/badge.svg)](https://codecov.io/gh/abouthiroppy/dish)
+[![npm version](https://badge.fury.io/js/my-dish.svg)]()
 
 ## What's Dish?
 `dish` command to scaffold complete projects.
