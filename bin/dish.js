@@ -25,6 +25,7 @@ inquirer.prompt([
     message: 'Which do you want to use?',
     choices: [
       'Web Application with React',
+      'Web Application with React and Redux',
       'React Library',
       'Command Line Tool'
     ]

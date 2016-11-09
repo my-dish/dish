@@ -2,7 +2,8 @@
   "parser": "babel-eslint",
   "rules": {
     "react/jsx-uses-vars": 1,
-    "react/jsx-uses-react": 1
+    "react/jsx-uses-react": 1,
+    "flowtype/define-flow-type": 1
   },
   "env": {
     "es6": true,
@@ -11,7 +12,8 @@
     "browser": true
   },
   "plugins": [
-    "react"
+    "react",
+    "flowtype"
   ],
   "ecmaFeatures": {
     "jsx": true,

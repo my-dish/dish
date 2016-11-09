@@ -1,0 +1,3 @@
+@define-mixin hero-background $color: #ccc {
+  background: $color;
+}

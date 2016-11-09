@@ -1,0 +1,11 @@
+.container {
+  margin: 15px;
+}
+
+.input {
+  font-size: 20px;
+  height: 30px;
+  outline: none;
+  padding-left: 15px;
+  width: 300px;
+}
