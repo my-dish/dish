@@ -1,7 +1,7 @@
 {
   "name": "my-dish",
   "version": "1.0.0-beta.6",
-  "description": "Generates various templates. Includes `web application with React`, `React library`, `command line tool`.",
+  "description": "Generates various templates. Includes `web application with React`, `web application with React and Redux`, `React library`, `command line tool`.",
   "scripts": {
     "test": "NODE_ENV=test nyc ava",
     "test:watch": "NODE_ENV=test ava -w",
@@ -17,6 +17,8 @@
   "keywords": [
     "template",
     "react",
+    "redux",
+    "saga",
     "cli",
     "generate",
     "scaffolding",
