@@ -1,5 +1,5 @@
-<a name="1.0.0-beta.7"></a>
-# [1.0.0-beta.7](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.2...v1.0.0-beta.7) (2016-11-09)
+<a name="1.0.0-beta.8"></a>
+# [1.0.0-beta.8](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.2...v1.0.0-beta.8) (2016-11-10)
 
 
 ### Bug Fixes
@@ -14,6 +14,7 @@
 * **npm:** add npm field ([ea60dc7](https://github.com/abouthiroppy/dish/commit/ea60dc7))
 * **npm:** Set main path in package.json ([f8a2220](https://github.com/abouthiroppy/dish/commit/f8a2220))
 * **react-redux:** add react-redux-application template ([c47322b](https://github.com/abouthiroppy/dish/commit/c47322b))
+* **react-redux:** fix configureStore.prod ([0042c28](https://github.com/abouthiroppy/dish/commit/0042c28))
 * **react-redux:** introduce Flow 🎉 ([4ba4cf7](https://github.com/abouthiroppy/dish/commit/4ba4cf7))
 * **saga:** introduce saga ([d43fbef](https://github.com/abouthiroppy/dish/commit/d43fbef))
 
