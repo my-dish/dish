@@ -20,8 +20,8 @@ if (commands[0] === '-v' || commands[0] === '--version') {
 
 inquirer.prompt([
   {
-    type: 'list',
-    name: 'type',
+    type   : 'list',
+    name   : 'type',
     message: 'Which do you want to use?',
     choices: [
       'Web Application with React',

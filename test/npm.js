@@ -21,6 +21,9 @@ test('should make package.json of `Web Application with React`', async (t) => {
   t.is(res, true);
 });
 
+/**
+ * @module isexistedpackagejson
+ */
 function isExistedPackageJSON() {
   return new Promise((resolve) => {
     const items = [];

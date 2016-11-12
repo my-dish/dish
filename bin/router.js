@@ -5,7 +5,7 @@ module.exports = (templateType) => {
     case 0:
     case 'Web Application with React':
       return {
-        id: 0,
+        id : 0,
         npm: {
           env     : require('../npm/react-application/env'),
           tasks   : require('../npm/react-application/tasks'),
@@ -17,7 +17,7 @@ module.exports = (templateType) => {
     case 1:
     case 'React Library':
       return {
-        id: 1,
+        id : 1,
         npm: {
           env     : require('../npm/react-library/env'),
           tasks   : require('../npm/react-library/tasks'),
@@ -29,7 +29,7 @@ module.exports = (templateType) => {
     case 2:
     case 'Command Line Tool':
       return {
-        id: 2,
+        id : 2,
         npm: {
           env     : require('../npm/cli/env'),
           tasks   : require('../npm/cli/tasks'),
@@ -41,7 +41,7 @@ module.exports = (templateType) => {
     case 4:
     case 'Web Application with React and Redux':
       return {
-        id: 4,
+        id : 4,
         npm: {
           env     : require('../npm/react-redux-application/env'),
           tasks   : require('../npm/react-redux-application/tasks'),
@@ -51,4 +51,4 @@ module.exports = (templateType) => {
         templatePath: 'react-redux-application'
       };
   }
-}
+};

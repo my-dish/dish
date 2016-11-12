@@ -2,7 +2,7 @@
 
 module.exports = {
   main: 'bin',
-  key: [
+  key : [
     {
       files: [
         'bin'

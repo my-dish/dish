@@ -33,6 +33,9 @@ test('should make directory of `Command Line Tool`', async (t) => {
   t.not(res, 0);
 });
 
+/**
+ * @module walk
+ */
 function walk() {
   return new Promise((resolve) => {
     const items = [];

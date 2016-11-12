@@ -3,7 +3,7 @@
 module.exports = {
   jest: {
     moduleFileExtensions: ['js'],
-    moduleNameMapper: {
+    moduleNameMapper    : {
       '^.+\\.(css)$': 'identity-obj-proxy'
     }
   }

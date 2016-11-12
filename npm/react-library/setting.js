@@ -2,7 +2,7 @@
 
 module.exports = {
   main: 'lib',
-  key: [
+  key : [
     {
       files: []
     },

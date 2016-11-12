@@ -6,7 +6,7 @@ module.exports = {
       'test/**/*.js'
     ],
     concurrency: 5,
-    failFast: true,
-    tap: true
+    failFast   : true,
+    tap        : true
   }
 };

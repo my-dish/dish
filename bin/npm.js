@@ -21,11 +21,11 @@ module.exports = (projectName, projectPath, templateType) => {
   })();
 
   const packageInfo = {
-    name: projectName,
-    main: path.join(npm.setting.main, 'index.js'),
-    author: author === '' ? undefined : author,
-    version: '0.0.1',
-    license: npmrc['init.license'] === undefined ? 'ISC' : npmrc['init.license'],
+    name       : projectName,
+    main       : path.join(npm.setting.main, 'index.js'),
+    author     : author === '' ? undefined : author,
+    version    : '0.0.1',
+    license    : npmrc['init.license'] === undefined ? 'ISC' : npmrc['init.license'],
     description: ''
   };
 
@@ -58,6 +58,9 @@ module.exports = (projectName, projectPath, templateType) => {
   }
 };
 
+/**
+ * @description execute install
+ */
 function install(args) {
   spawn.sync('npm', args, {stdio: 'inherit'});
 }

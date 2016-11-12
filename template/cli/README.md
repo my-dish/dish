@@ -6,6 +6,8 @@
   <strong>template for Command Line Tool</strong>
 </div>
 
+<!-- npm version badge: https://badge.fury.io/ -->
+
 ## Usage
 1. Edit your comamnd name in `bin` of `package.json`.
 2. Type `$ npm link`.

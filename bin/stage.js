@@ -40,6 +40,9 @@ module.exports = (projectName, templateType, testDirPath) => {
   }
 };
 
+/**
+ * @description copy the template for test or development
+ */
 function debugMode(templatePath, testDirPath) {
   const base = testDirPath ? testDirPath : '.';
 
@@ -47,6 +50,9 @@ function debugMode(templatePath, testDirPath) {
   fs.copySync(path.join(__dirname, '..', 'template', templatePath), base);
 }
 
+/**
+ * @description copy the template for production
+ */
 function productionMode(templatePath) {
   fs.copySync(path.resolve('node_modules', 'my-dish', 'template', 'common'), '.');
   fs.copySync(path.resolve('node_modules', 'my-dish', 'template', templatePath), '.');

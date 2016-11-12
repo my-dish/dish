@@ -6,9 +6,9 @@ module.exports = {
       'test/**/*.js'
     ],
     concurrency: 5,
-    failFast: true,
-    tap: true,
-    require: [
+    failFast   : true,
+    tap        : true,
+    require    : [
       'ignore-styles',
       'babel-register'
     ],

@@ -2,7 +2,7 @@
 
 module.exports = {
   main: 'src',
-  key: [
+  key : [
     {
       homepage: ''
     }
