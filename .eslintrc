@@ -13,5 +13,5 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": "eslint:recommended"
+  "extends": "sky/base"
 }
