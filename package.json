@@ -63,7 +63,7 @@
     "conventional-changelog-cli": "^1.2.0",
     "eslint": "^3.2.2",
     "eslint-config-sky": "^1.2.1",
-    "nyc": "^8.3.2",
+    "nyc": "^9.0.1",
     "pify": "^2.3.0"
   },
   "ava": {
