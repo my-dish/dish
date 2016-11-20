@@ -1,25 +1,15 @@
 {
-  "parser": "babel-eslint",
-  "rules": {
-    "react/jsx-uses-vars": 1,
-    "react/jsx-uses-react": 1,
-    "flowtype/define-flow-type": 1
-  },
   "env": {
     "es6": true,
     "node": true,
     "mocha": true,
     "browser": true
   },
-  "plugins": [
-    "react",
-    "flowtype"
-  ],
   "ecmaFeatures": {
     "jsx": true,
     "modules": true
   },
   "globals": {
   },
-  "extends": "eslint:recommended"
+  "extends": "sky"
 }

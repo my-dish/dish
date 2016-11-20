@@ -8,6 +8,7 @@ module.exports = {
     'babel-eslint',
     'conventional-changelog-cli',
     'eslint',
+    'eslint-config-sky',
     'nyc',
     'pify'
   ]
