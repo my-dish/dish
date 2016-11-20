@@ -1,5 +1,5 @@
-<a name="1.0.0-beta.9"></a>
-# [1.0.0-beta.9](https://github.com/abouthiroppy/dish/compare/v0.5.1...v1.0.0-beta.9) (2016-11-16)
+<a name="1.0.0-beta.10"></a>
+# [1.0.0-beta.10](https://github.com/abouthiroppy/dish/compare/v0.5.1...v1.0.0-beta.10) (2016-11-20)
 
 
 ### Bug Fixes
@@ -10,11 +10,12 @@
 
 ### Features
 
-* **npm:** add npm field ([ea60dc7](https://github.com/abouthiroppy/dish/commit/ea60dc7))
+* **cli-template:** add cli template ([341a089](https://github.com/abouthiroppy/dish/commit/341a089))
 * create directories for npm, template ([420c7cc](https://github.com/abouthiroppy/dish/commit/420c7cc))
 * **bin:** allow to choose plural templates ([4c84a56](https://github.com/abouthiroppy/dish/commit/4c84a56))
-* **cli-template:** add cli template ([341a089](https://github.com/abouthiroppy/dish/commit/341a089))
+* **cli, react-redux:** make use of eslint-config-sky ([05d2877](https://github.com/abouthiroppy/dish/commit/05d2877))
 * **npm:** add engines to cli-template ([4a549b0](https://github.com/abouthiroppy/dish/commit/4a549b0))
+* **npm:** add npm field ([ea60dc7](https://github.com/abouthiroppy/dish/commit/ea60dc7))
 * **npm:** add npm settings for react-library ([48c71e1](https://github.com/abouthiroppy/dish/commit/48c71e1))
 * **npm:** Set main path in package.json ([f8a2220](https://github.com/abouthiroppy/dish/commit/f8a2220))
 * **react-redux:** add react-redux-application template ([c47322b](https://github.com/abouthiroppy/dish/commit/c47322b))
