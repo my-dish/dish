@@ -61,7 +61,7 @@
     "ava": "^0.16.0",
     "babel-eslint": "^7.0.0",
     "conventional-changelog-cli": "^1.2.0",
-    "eslint": "^3.2.2",
+    "eslint": "^3.10.0",
     "eslint-config-sky": "^1.2.1",
     "nyc": "^10.0.0",
     "pify": "^2.3.0"
