@@ -6,7 +6,18 @@
   <strong>template for Command Line Tool</strong>
 </div>
 
+<!-- travis https://travis-ci.org/ -->
+<!-- codecov https://codecov.io/gh -->
 <!-- npm version badge: https://badge.fury.io/ -->
+
+## Install
+```
+$ npm install
+```
+
+## Usage
+```
+```
 
 ## Usage
 1. Edit your comamnd name in `bin` of `package.json`.
