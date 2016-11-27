@@ -1,3 +1,13 @@
+<a name="1.0.0-beta.11"></a>
+# [1.0.0-beta.11](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2016-11-27)
+
+
+### Features
+
+* **cli:** modify template ([5be54cd](https://github.com/abouthiroppy/dish/commit/5be54cd))
+
+
+
 <a name="1.0.0-beta.10"></a>
 # [1.0.0-beta.10](https://github.com/abouthiroppy/dish/compare/v0.5.1...v1.0.0-beta.10) (2016-11-20)
 
