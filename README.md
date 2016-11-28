@@ -24,7 +24,7 @@ $ enjoy it!
 ![](./images/img1.png)
 
 ## Included templates
-- [Web Application with React](./template/react-redux-application)
+- [Web Application with React](./template/react-application)
 - [Web Application with React and Redux](./template/react-redux-application)
 - [React Library](./template/react-library)
 - [Command Line Tool](./template/cli)
