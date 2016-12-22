@@ -1,3 +1,18 @@
+<a name="1.0.0-beta.13"></a>
+# [1.0.0-beta.13](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2016-12-22)
+
+
+### Bug Fixes
+
+* **plane:** modify main path ([a07494c](https://github.com/abouthiroppy/dish/commit/a07494c))
+
+
+### Features
+
+* **plane:** add README.md ([04824cf](https://github.com/abouthiroppy/dish/commit/04824cf))
+
+
+
 <a name="1.0.0-beta.12"></a>
 # [1.0.0-beta.12](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2016-12-22)
 
