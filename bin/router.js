@@ -50,5 +50,17 @@ module.exports = (templateType) => {
         },
         templatePath: 'react-redux-application'
       };
+    case 5:
+    case 'Plane':
+      return {
+        id : 5,
+        npm: {
+          env     : require('../npm/plane/env'),
+          tasks   : require('../npm/plane/tasks'),
+          setting : require('../npm/plane/setting'),
+          packages: require('../npm/plane/packages')
+        },
+        templatePath: 'plane'
+      };
   }
 };
