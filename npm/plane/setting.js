@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  main: 'index.js',
+  main: '',
   key : [
     {
       files: [
