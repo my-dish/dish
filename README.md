@@ -28,6 +28,7 @@ $ enjoy it!
 - [Web Application with React and Redux](./template/react-redux-application)
 - [React Library](./template/react-library)
 - [Command Line Tool](./template/cli)
+- [Plane](./template/plane)
 
 ## CHANGELOG
 See the [CHANGELOG.md](./CHANGELOG.md).
