@@ -1,3 +1,13 @@
+<a name="1.0.0-beta.12"></a>
+# [1.0.0-beta.12](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2016-12-22)
+
+
+### Features
+
+* **Plane:** add plane template ([b038227](https://github.com/abouthiroppy/dish/commit/b038227))
+
+
+
 <a name="1.0.0-beta.11"></a>
 # [1.0.0-beta.11](https://github.com/abouthiroppy/dish/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2016-11-27)
 
