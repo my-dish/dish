@@ -1,15 +1,15 @@
 sudo: false
 language: node_js
 cache:
+  yarn: true
   directories:
-    - $HOME/.npm
-    - $HOME/.yarn-cache
+    - node_modules
 node_js:
   - stable
+  - 6
 os:
   - linux
 before_script:
-  - npm install yarn -g
   - yarn install
   - yarn link || true
   - npm test
