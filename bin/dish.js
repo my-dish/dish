@@ -28,7 +28,7 @@ inquirer.prompt([
       'Web Application with React and Redux',
       'React Library',
       'Command Line Tool',
-      'Plane'
+      'Plain'
     ]
   }
 ]).then((ans) => {

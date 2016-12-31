@@ -37,7 +37,7 @@
     "dish": "./bin/dish.js"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "repository": {
     "url": "git+https://github.com/abouthiroppy/dish.git",
