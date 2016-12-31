@@ -10,7 +10,7 @@ module.exports = {
     'babel-eslint',
     'conventional-changelog-cli',
     'eslint',
-    'eslint-plugin-react',
+    'eslint-config-sky',
     'nyc'
   ]
 };

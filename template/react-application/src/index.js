@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {AppContainer} from 'react-hot-loader';
+import { AppContainer } from 'react-hot-loader';
 import App from './components/App';
 
 const rootEl = document.getElementById('root');
@@ -18,7 +18,7 @@ if (module.hot) {
 
     ReactDOM.render((
       <AppContainer>
-         <NextApp />
+        <NextApp />
       </AppContainer>),
       rootEl
     );

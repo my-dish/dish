@@ -27,7 +27,7 @@ $ enjoy it!
 - [Web Application with React](./template/react-application)
 - [Web Application with React and Redux](./template/react-redux-application)
 - [React Library](./template/react-library)
-- [Command Line Tool](./template/cli)
+- [CLI](./template/cli)
 - [Plain](./template/plain)
 
 ## CHANGELOG

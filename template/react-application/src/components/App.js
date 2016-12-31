@@ -1,12 +1,12 @@
+// @flow
+
 import React from 'react';
 import Hero from './Hero';
 
-export default class extends React.Component {
-  render() {
-    return (
-      <div>
-        <Hero />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Hero />
+  </div>
+);
+
+export default App;

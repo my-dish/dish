@@ -11,5 +11,5 @@
   ],
   "globals": {
   },
-  "extends": "eslint:recommended"
+  "extends": "sky/react"
 }

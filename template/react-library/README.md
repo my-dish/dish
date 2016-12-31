@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <strong>template for React library</strong>
+  <strong>Template for React Library</strong>
 </div>
 
 ## Tasks

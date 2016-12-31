@@ -1,77 +1,77 @@
 'use strict';
 
-const path                    = require('path');
-const precss                  = require('precss');
-const webpack                 = require('webpack');
-const Dashboard               = require('webpack-dashboard');
-const autoprefixer            = require('autoprefixer');
-const DashboardPlugin         = require('webpack-dashboard/plugin');
-const FlowStatusWebpackPlugin = require('flow-status-webpack-plugin');
+const path                     = require('path');
+const merge                    = require('webpack-merge');
+const webpack                  = require('webpack');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 // const ExtractTextPlugin       = require('extract-text-webpack-plugin');
 
-const PORT      = 8080;
-const dashboard = new Dashboard();
+const config = process.env.NODE_ENV !== 'production' ?
+  require('./webpack.dev.config') :
+  require('./webpack.prod.config');
 
-module.exports = {
-  entry: [
-    path.join(__dirname, 'src', 'index.js')
-  ],
+const localIdentName = process.env.NODE_ENV !== 'production' ?
+  '[path]__[name]__[local]__[hash:base64:5]' :
+  '[hash:base64:5]';
+
+const cssLoaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      modules: true,
+      importLoaders: 1,
+      localIdentName
+    }
+  },
+  {
+    loader: 'postcss-loader'
+  }
+];
+
+const common = {
+  bail: true,
+  target: 'web',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/dist/'
   },
-  cache: true,
-  target: 'web',
-  devtool: 'cheap-module-eval-source-map',
   resolve: {
-    extensions: ['', '.js', '.css']
+    modules         : ['node_modules'],
+    extensions      : ['.js', '.css'],
+    enforceExtension: false,
+    moduleExtensions: ['-loader'],
+    descriptionFiles: ['package.json']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        include: path.join(__dirname, 'src'),
+        use: 'babel-loader',
         exclude: path.join(__dirname, 'node_modules')
       },
       {
         test: /\.css$/,
-        loaders: [
-          'style',
-          'css?modules&importLoaders=1&localIdentName=[path]__[name]__[local]__[hash:base64:5]',
-          'postcss'
-        ]
-        // loader: ExtractTextPlugin.extract(
-        //   'style',
-        //   [
-        //     'css?modules&importLoaders=1&localIdentName=[path]__[name]__[local]__[hash:base64:5]',
-        //     'postcss'
-        //   ]
-        // )
+        use: [
+          'style-loader',
+          ...cssLoaders
+        ],
+        // loader: ExtractTextPlugin.extract({
+        //   fallbackLoader: 'style-loader',
+        //   loader: cssLoaders
+        // })
       }
     ]
   },
+
   plugins: [
     // new ExtractTextPlugin('styles.css'),
-    new DashboardPlugin(dashboard.setData),
-    new webpack.HotModuleReplacementPlugin(), // if you don't specify `--hot`
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
     new webpack.NoErrorsPlugin(),
-    new FlowStatusWebpackPlugin({
-      failOnError: true
-    })
-  ],
-  postcss: () => [precss, autoprefixer],
-  devServer: {
-    hot: true,
-    port: PORT,
-    quiet: true,
-    cache: true,
-    inline: true,
-    colors: true,
-    contentBase: '.'
-  }
+    new CaseSensitivePathsPlugin()
+  ]
 };
+
+module.exports = merge.smart(common, config);
