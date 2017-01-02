@@ -71,7 +71,8 @@ const common = {
     }),
     new webpack.NoErrorsPlugin(),
     new CaseSensitivePathsPlugin()
-  ]
+  ],
+  performance: {hints: false}
 };
 
 module.exports = merge.smart(common, config);
