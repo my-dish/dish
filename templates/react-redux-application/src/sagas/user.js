@@ -1,20 +1,25 @@
 // @flow
 
-import type {Effect} from 'redux-saga';
-import type {UsersAction} from '../types';
+import type { Effect } from 'redux-saga';
+import type { UsersAction } from '../types';
 
 import axios from 'axios';
-import {takeEvery} from 'redux-saga';
-import {cancel, fork, put} from 'redux-saga/effects';
-// import {call, put, cancel, fork} from 'redux-saga/effects';
+import { takeEvery } from 'redux-saga';
+import { cancel, fork, put } from 'redux-saga/effects';
 
+/**
+ * fetch from somewhere
+ */
 function fetchName(): Promise<Object[]> { // eslint-disable-line no-unused-vars
   return axios.get('')
     .then((res) => res)
     .catch((err) => err);
 }
 
-function* updateName(action: UsersAction): Generator<Effect, void, *> {
+/**
+ * update my name
+ */
+function *updateName(action: UsersAction): Generator<Effect, void, *> {
   try {
     const name = action.name; // eslint-disable-line no-unused-vars
     // yield call(fetchName);
@@ -30,12 +35,18 @@ function* updateName(action: UsersAction): Generator<Effect, void, *> {
   }
 }
 
-function* updateNameFlow(action: UsersAction): Generator<Effect, void, *> {
+/**
+ * flow of update the name
+ */
+function *updateNameFlow(action: UsersAction): Generator<Effect, void, *> {
   const task = yield fork(updateName, action);
 
   yield cancel(task);
 }
 
-export default function* user(): Generator<Effect, void, *> {
+/**
+ * root
+ */
+export default function *user(): Generator<Effect, void, *> {
   yield* takeEvery('UPDATE_NAME', updateNameFlow);
 }

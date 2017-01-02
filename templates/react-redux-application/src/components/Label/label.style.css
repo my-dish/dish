@@ -1,8 +1,7 @@
 @import "../../styles/variables";
-@import "../../styles/mixins/hero-background";
 
 .title {
-  color: $text-color;
+  color: var(--text-color);
   font-size: 3rem;
   margin: 0;
   text-align: center;

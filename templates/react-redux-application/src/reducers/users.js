@@ -1,8 +1,8 @@
 // @flow
 
-import type {Users, UsersAction} from '../types';
+import type { Users, UsersAction } from '../types';
 
-const initialState: Object = {
+const initialState = {
   name: ':)'
 };
 
@@ -12,9 +12,9 @@ const reducer = (state: Users = initialState, action: UsersAction) => {
       return Object.assign({}, state, {
         name: action.name
       });
-     default:
-       (action: empty);
-       return state;
+    default:
+      (action: empty);
+      return state;
   }
 };
 

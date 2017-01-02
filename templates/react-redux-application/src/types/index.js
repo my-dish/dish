@@ -1,15 +1,15 @@
 // @flow
 
 export type Users = {
-  name: string
+  name: string;
 };
 
 // add states
 export type AllStates = {
-  users: Users
+  users: Users;
 };
 
 export type UsersAction = {
-  type: 'UPDATE_NAME',
-  name: string
+  type: 'UPDATE_NAME';
+  name: string;
 };

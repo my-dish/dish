@@ -1,6 +1,8 @@
 // @flow
 
-import {createStore, applyMiddleware, compose} from 'redux';
+import type { AllStates } from '../types';
+
+import { createStore, applyMiddleware, compose } from 'redux';
 import createSaga from 'redux-saga';
 import rootReducer from '../reducers';
 import * as definedMiddlewares from '../middlewares';
@@ -18,7 +20,7 @@ const middlewares: Array<Function> = [
 
 const enhancer = compose(applyMiddleware(...middlewares));
 
-const configureStore = (initialState?: Object) => {
+const configureStore = (initialState?: AllStates) => {
   const store = createStore(rootReducer, initialState, enhancer);
 
   saga.run(mySaga);
