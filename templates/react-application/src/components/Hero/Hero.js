@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import styles from './hero.style';
+import styles from './hero.style.css';
 
 const Hero = () => (
   <div className={styles.container}>
