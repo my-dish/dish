@@ -4,8 +4,7 @@ module.exports = {
   dependencies: [
   ],
   devDependencies: [
-    'ava',
-    'babel-eslint',
+    'ava@0.16.0', // [TODO] do a search
     'conventional-changelog-cli',
     'eslint',
     'eslint-config-sky',

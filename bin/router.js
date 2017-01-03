@@ -27,7 +27,7 @@ module.exports = (templateType) => {
         templatePath: 'react-library'
       };
     case 2:
-    case 'Command Line Tool':
+    case 'CLI':
       return {
         id : 2,
         npm: {
