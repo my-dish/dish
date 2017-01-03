@@ -2,6 +2,7 @@
 
 module.exports = {
   dependencies: [
+    'axios',
     'react',
     'react-dom'
   ],
@@ -30,7 +31,7 @@ module.exports = {
     'identity-obj-proxy',
     'jest',
     'react-addons-test-utils',
-    'react-hot-loader@3.0.0-beta.6',
+    'react-hot-loader@next',
     'stylelint',
     'stylelint-config-sky',
     'style-loader',

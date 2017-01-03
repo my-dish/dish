@@ -37,7 +37,7 @@ module.exports = {
     'react-addons-test-utils',
     'redux-devtools',
     'redux-devtools-extension',
-    'react-hot-loader@3.0.0-beta.6',
+    'react-hot-loader@next',
     'redux-logger',
     'style-loader',
     'stylelint',

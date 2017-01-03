@@ -7,7 +7,6 @@ module.exports = {
   ],
   devDependencies: [
     'ava',
-    'babel-eslint',
     'conventional-changelog-cli',
     'eslint',
     'eslint-config-sky',
