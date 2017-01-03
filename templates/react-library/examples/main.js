@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hero from '../lib';
+import Hero from '../src';
 
 const root = () => (
   <div

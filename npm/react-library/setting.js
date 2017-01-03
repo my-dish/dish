@@ -4,7 +4,7 @@ module.exports = {
   main: 'lib',
   key : [
     {
-      files: []
+      files: ['lib']
     },
     {
       keywords: []

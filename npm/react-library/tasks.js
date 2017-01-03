@@ -2,10 +2,15 @@
 
 module.exports = {
   scripts: {
+    build       : 'babel src -d lib',
+    flow        : 'flow',
+    'flow-typed': 'flow-typed install',
+    start       : 'start-storybook -p 8080',
     changelog   : 'conventional-changelog -p angular -i CHANGELOG.md -s -r 0',
-    lint        : 'eslint lib',
-    test        : 'ava',
-    'test:watch': 'ava -w',
+    lint        : 'eslint .',
+    test        : 'jest',
+    'test:watch': 'jest --watch',
+    prepublish  : 'npm run babel',
     postcover   : 'nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov'
   }
 };

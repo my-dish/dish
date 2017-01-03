@@ -8,12 +8,12 @@ module.exports = {
     path.join(__dirname, 'main.js')
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path      : path.join(__dirname, 'dist'),
+    filename  : 'bundle.js',
     publicPath: '/dist/'
   },
-  cache: true,
-  target: 'web',
+  cache  : true,
+  target : 'web',
   devtool: 'cheap-module-eval-source-map',
   resolve: {
     extensions: ['', '.js']
@@ -24,23 +24,23 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loader: 'babel',
+        test   : /\.js$/,
+        loader : 'babel',
         exclude: path.join(__dirname, 'node_modules')
-      },
+      }
     ]
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
   devServer: {
-    port: 8080,
-    cache: true,
-    inline: true,
-    colors: true,
+    port       : 8080,
+    cache      : true,
+    inline     : true,
+    colors     : true,
     contentBase: '.'
   }
 };
