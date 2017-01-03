@@ -5,6 +5,7 @@
   "scripts": {
     "test": "NODE_ENV=test nyc ava",
     "test:watch": "NODE_ENV=test ava -w",
+    "test:appveyor": "ava",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
