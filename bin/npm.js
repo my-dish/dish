@@ -62,5 +62,5 @@ module.exports = (projectName, projectPath, templateType) => {
  * @description execute install
  */
 function install(args) {
-  spawn.sync('npm', args, {stdio: 'inherit'});
+  spawn.sync('npm', args, { stdio: 'inherit' });
 }

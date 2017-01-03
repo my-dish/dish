@@ -1,6 +1,6 @@
 import test from 'ava';
 import pify from 'pify';
-import {execFile} from 'child_process';
+import { execFile } from 'child_process';
 import packages from '../package.json';
 
 test('should return description', async (t) => {

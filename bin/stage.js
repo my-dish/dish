@@ -46,14 +46,14 @@ module.exports = (projectName, templateType, testDirPath) => {
 function debugMode(templatePath, testDirPath) {
   const base = testDirPath ? testDirPath : '.';
 
-  fs.copySync(path.join(__dirname, '..', 'template', 'common'), base);
-  fs.copySync(path.join(__dirname, '..', 'template', templatePath), base);
+  fs.copySync(path.join(__dirname, '..', 'templates', 'common'), base);
+  fs.copySync(path.join(__dirname, '..', 'templates', templatePath), base);
 }
 
 /**
  * @description copy the template for production
  */
 function productionMode(templatePath) {
-  fs.copySync(path.resolve('node_modules', 'my-dish', 'template', 'common'), '.');
-  fs.copySync(path.resolve('node_modules', 'my-dish', 'template', templatePath), '.');
+  fs.copySync(path.resolve('node_modules', 'my-dish', 'templates', 'common'), '.');
+  fs.copySync(path.resolve('node_modules', 'my-dish', 'templates', templatePath), '.');
 }

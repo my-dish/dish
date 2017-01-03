@@ -2,12 +2,16 @@
 
 module.exports = {
   scripts: {
-    build       : 'webpack --config ./webpack.production.config.js',
+    build       : 'NODE_ENV=production webpack',
+    postinstall : 'npm run flow-typed',
     changelog   : 'conventional-changelog -p angular -i CHANGELOG.md -s -r 0',
     flow        : 'flow',
-    lint        : 'eslint src',
+    'flow-typed': 'flow-typed install',
+    lint        : 'npm run lint:js && npm run lint:css',
+    'lint:js'   : 'eslint src',
+    'lint:css'  : 'stylelint src/**/*.css',
     start       : 'webpack-dev-server',
-    test        : 'ava',
-    'test:watch': 'ava -w'
+    test        : 'jest',
+    'test:watch': 'jest -w'
   }
 };
