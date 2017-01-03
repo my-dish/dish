@@ -1,6 +1,6 @@
 {
   "name": "my-dish",
-  "version": "1.0.0-beta.13",
+  "version": "1.0.0",
   "description": "Generates various templates. Includes `web application with React`, `web application with React and Redux`, `React library`, `command line tool`.",
   "scripts": {
     "test": "NODE_ENV=test nyc ava",
