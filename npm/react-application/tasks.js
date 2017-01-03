@@ -11,7 +11,7 @@ module.exports = {
     'lint:js'   : 'eslint src',
     'lint:css'  : 'stylelint src/**/*.css',
     start       : 'webpack-dev-server',
-    test        : 'jest',
-    'test:watch': 'jest -w'
+    test        : 'jest --coverage',
+    'test:watch': 'jest --watch --coverage'
   }
 };

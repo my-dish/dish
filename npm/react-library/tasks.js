@@ -8,8 +8,8 @@ module.exports = {
     start       : 'start-storybook -p 8080',
     changelog   : 'conventional-changelog -p angular -i CHANGELOG.md -s -r 0',
     lint        : 'eslint .',
-    test        : 'jest',
-    'test:watch': 'jest --watch',
+    test        : 'jest --coverage',
+    'test:watch': 'jest --watch --coverage',
     prepublish  : 'npm run babel',
     postcover   : 'nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov'
   }
