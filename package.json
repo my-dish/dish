@@ -7,7 +7,7 @@
     "test:watch": "NODE_ENV=test ava -w",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "postcover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "files": [
