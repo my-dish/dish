@@ -3,8 +3,12 @@
 </div>
 
 <div align="center">
-  <strong>template for frontend application</strong>
+  <strong>the template for web application with React</strong>
 </div>
+
+<!-- travis https://travis-ci.org/ -->
+<!-- appveyor https://ci.appveyor.com -->
+<!-- codecov https://codecov.io/gh -->
 
 ## Tasks
 ### Development
@@ -13,83 +17,119 @@ $ npm start
 $ open http://localhost:8080 # or http://localhost:8080/webpack-dev-server/
 ```
 
+### Build
+Build as production.  
+Source codes is compressed by webpack.  
+If you don want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
+```
+$ npm run build
+```
+
 ### Test
 ```
 $ npm test # or npm test:watch
 ```
 
-### Build
+### Flow
 ```
-$ npm run build
+$ npm run flow
 ```
+
+### Flow-Typed
+```
+$ npm run fow-typed
+```
+
+### Lint
+Runs css and js lints.
+```
+$ npm run lint
+```
+
+### Changelog
+```
+$ npm run changelog
+```
+
+## Packages
+### Dependencies
+- axios
+- react
+- react-dom
+
+### DevDependencies
+- babel-core
+- babel-eslint
+- babel-jest
+- babel-loader
+- babel-polyfill
+- babel-preset-latest
+- babel-preset-react
+- babel-preset-stage-1
+- babel-plugin-syntax-flow
+- babel-plugin-transform-flow-strip-types
+- case-sensitive-paths-webpack-plugin
+- conventional-changelog-cli
+- css-loader
+- enzyme
+- eslint
+- eslint-plugin-react
+- eslint-config-sky
+- extract-text-webpack-plugin@beta
+- flow-bin
+- flow-typed
+- flow-status-webpack-plugin
+- identity-obj-proxy
+- jest
+- react-addons-test-utils
+- react-hot-loader@next
+- stylelint
+- stylelint-config-sky
+- style-loader
+- postcss-loader
+- postcss-cssnext
+- postcss-mixins
+- postcss-reporter
+- postcss-smart-import
+- postcss-browser-reporter
+- webpack@beta
+- webpack-dashboard
+- webpack-dev-server@beta
+- webpack-merge
 
 ## Directory Structure of the Generated Project
 ```
 .
+├── .appveyor.yml
 ├── .babelrc
 ├── .editorconfig
 ├── .eslintignore
 ├── .eslintrc
 ├── .flowconfig
 ├── .gitignore
+├── .stylelintrc
 ├── .travis.yml
 ├── LICENSE
 ├── README.md
+├── __tests__
+│   └── hero.js
 ├── index.html
+├── package.json
+├── postcss.config.js
 ├── src
 │   ├── components
+│   │   ├── App.js
 │   │   └── Hero
 │   │       ├── Hero.js
 │   │       ├── hero.style.css
 │   │       └── index.js
 │   ├── index.js
 │   └── styles
-│       ├── _mixins.css
-│       ├── _variables.css
-│       └── mixins
-│           └── _hero-background.css
-├── test
-│   ├── helpers
-│   │   └── setup-browser-env.js
-│   └── hero.js
+│       ├── mixins
+│       │   └── hero-background.css
+│       ├── mixins.css
+│       └── variables.css
 ├── webpack.config.js
-└── webpack.production.config.js
+├── webpack.dev.config.js
+└── webpack.prod.config.js
 ```
-
-## npm start
-Start as development.  
-Default port is 8080.  
-Dish uses [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard) and [webpack-dev-server](https://github.com/webpack/webpack-dev-server).
-
-## npm test
-Test runner is [ava](https://github.com/avajs/ava).
-
-## npm run build
-Build as production.  
-Source codes is compressed by webpack.  
-If you don't want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
-
-## npm run flow
-Check a type in your code.
-
-## Tools
-- webpack
-  - webpack-dev-server
-  - webpack-dashboard
-- babel
-  - latest
-  - stage-0
-- eslint
-- flow
-
-## Frameworks
-- react
-- postcss(use css-modules)
-  - precss
-  - autoprefixer
-
-## Testing Tools
-- ava
-- enzyme
-- jsdom
-- sinon

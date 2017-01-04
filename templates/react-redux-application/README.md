@@ -3,50 +3,125 @@
 </div>
 
 <div align="center">
-  <strong>template for frontend application</strong>
+  <strong>the template for Web Application with React-Redux</strong>
 </div>
 
-## Tasks
+<!-- travis https://travis-ci.org/ -->
+<!-- appveyor https://ci.appveyor.com -->
+<!-- codecov https://codecov.io/gh -->
 
-### npm start
-Start as development.  
-Default port is 8080.  
-Dish uses [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard) and [webpack-dev-server](https://github.com/webpack/webpack-dev-server).
+## Setup
+```
+$ cd <project-directory>
+$ npm run flow-typed # dish required running this command before starting.
+$ npm start
+```
+
+## Tasks
+### Development
 ```
 $ npm start
 $ open http://localhost:8080 # or http://localhost:8080/webpack-dev-server/
 ```
 
-### npm test
-Test runner is [ava](https://github.com/avajs/ava).
-```
-$ npm run test or npm run test:watch
-```
-
-### npm run build
+### Build
 Build as production.  
-Source codes is compressed by webpack.  
-If you don't want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
+Source codes are compressed by webpack.  
+If you don want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.config.js`.
+```
+$ npm run build
+```
 
-### npm run flow
-Use flow-bin.
-Check a type in your code.
+### Test
+```
+$ npm test # or npm test:watch
+```
 
-### npm run lint
-Use eslint.
+### Flow
+```
+$ npm run flow
+```
 
-### npm run changelog
-Generate CHANGELOG.md from your commit.
+### Flow-Typed
+```
+$ npm run fow-typed
+```
+
+### Lint
+Runs css and js lints.
+```
+$ npm run lint
+```
+
+### Changelog
+```
+$ npm run changelog
+```
+
+## Packages
+### Dependencies
+- axios
+- immutable
+- react
+- react-dom
+- react-redux
+- redux
+- redux-saga
+
+### DevDependencies
+- babel-core
+- babel-eslint
+- babel-jest
+- babel-loader
+- babel-polyfill
+- babel-preset-latest
+- babel-preset-react
+- babel-preset-stage-1
+- babel-plugin-syntax-flow
+- babel-plugin-transform-flow-strip-types
+- conventional-changelog-cli
+- case-sensitive-paths-webpack-plugin
+- css-loader
+- enzyme
+- eslint
+- eslint-config-sky
+- extract-text-webpack-plugin@beta
+- flow-bin
+- flow-typed
+- flow-status-webpack-plugin
+- identity-obj-proxy
+- jest
+- jsdom
+- react-addons-test-utils
+- redux-devtools
+- redux-devtools-extension
+- react-hot-loader@next
+- redux-logger
+- style-loader
+- stylelint
+- stylelint-config-sky
+- postcss-loader
+- postcss-cssnext
+- postcss-mixins
+- postcss-reporter
+- postcss-smart-import
+- postcss-browser-reporter
+- webpack@beta
+- webpack-dashboard
+- webpack-dev-server@beta
+- webpack-merge
 
 ## Directory Structure of the Generated Project
 ```
 .
+├── .appveyor.yml
 ├── .babelrc
 ├── .editorconfig
 ├── .eslintignore
 ├── .eslintrc
 ├── .flowconfig
 ├── .gitignore
+├── .stylelintrc
 ├── .travis.yml
 ├── LICENSE
 ├── README.md
@@ -69,6 +144,7 @@ Generate CHANGELOG.md from your commit.
 │       └── user.js
 ├── index.html
 ├── package.json
+├── postcss.config.js
 ├── src
 │   ├── actions
 │   │   └── index.js
@@ -99,15 +175,17 @@ Generate CHANGELOG.md from your commit.
 │   ├── store
 │   │   ├── configureStore.dev.js
 │   │   ├── configureStore.js
-│   │   └── configureStore.prod.js
+│   │   ├── configureStore.prod.js
+│   │   └── npm-debug.log
 │   ├── styles
-│   │   ├── _mixins.css
-│   │   ├── _variables.css
 │   │   ├── app.css
-│   │   └── mixins
-│   │       └── _hero-background.css
+│   │   ├── mixins
+│   │   │   └── outer-border.css
+│   │   ├── mixins.css
+│   │   └── variables.css
 │   └── types
 │       └── index.js
 ├── webpack.config.js
-└── webpack.production.config.js
+├── webpack.dev.config.js
+└── webpack.prod.config.js
 ```

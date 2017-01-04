@@ -3,10 +3,11 @@
 </div>
 
 <div align="center">
-  <strong>template for Command Line Tool</strong>
+  <strong>the template for CLI tool</strong>
 </div>
 
 <!-- travis https://travis-ci.org/ -->
+<!-- appveyor https://ci.appveyor.com -->
 <!-- codecov https://codecov.io/gh -->
 <!-- npm version badge: https://badge.fury.io/ -->
 
@@ -19,36 +20,48 @@ $ npm install
 ```
 ```
 
-## Usage
-1. Edit your comamnd name in `bin` of `package.json`.
-2. Type `$ npm link`.
-3. Enjoy it!
-
 ## Tasks
-### changelog
-create `CHANGELOG.md`.
-```
-$ npm run changelog
-```
-
-### test
-Test runner is [ava](https://github.com/avajs/ava).
+### Test
 ```
 $ npm test # or npm test:watch
 ```
 
-### lint
+### Lint
 ```
 $ npm run lint
 ```
 
+### Changelog
+```
+$ npm run changelog
+```
+
+## Packages
+### Dependencies
+- chalk
+
+### DevDependencies
+- ava@0.16.0
+- convertional-changelog-cli
+- eslint
+- eslint-config-sky
+- nyc
+- pify
+
 ## Directory Structure of the Generated Project
 ```
 .
+├── .appveyor.yml
+├── .editorconfig
+├── .eslintignore
+├── .eslintrc
+├── .gitignore
+├── .travis.yml
 ├── LICENSE
 ├── README.md
-├── lib
+├── bin
 │   └── index.js
+├── package.json
 └── test
     └── cli.js
 ```
