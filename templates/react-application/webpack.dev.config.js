@@ -13,7 +13,7 @@ module.exports = {
     'react-hot-loader/patch',
     path.join(__dirname, 'src', 'index.js')
   ],
-  cache: true,
+  cache  : true,
   devtool: 'cheap-module-eval-source-map',
   plugins: [
     new DashboardPlugin(dashboard.setData),
@@ -24,13 +24,13 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       debug   : true,
       minimize: false
-    }),
+    })
   ],
   devServer: {
-    hot: true,
-    port: 8080,
-    quiet: true,
-    inline: true,
+    hot        : true,
+    port       : 8080,
+    quiet      : true,
+    inline     : true,
     contentBase: '.'
   }
 };

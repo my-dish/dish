@@ -12,8 +12,8 @@ module.exports = {
   ],
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
-      output   : {comments: false},
-      compress : {warnings: false, 'screw_ie8': true},
+      output   : { comments: false },
+      compress : { warnings: false, 'screw_ie8': true },
       sourceMap: false
     }),
     new webpack.LoaderOptionsPlugin({

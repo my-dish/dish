@@ -27,7 +27,7 @@ $ open http://localhost:8080 # or http://localhost:8080/webpack-dev-server/
 ### Build
 Build as production.  
 Source codes are compressed by webpack.  
-If you don want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.config.js`.
+If you don't want to include the css in js, you should uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
 ```
 $ npm run build
 ```

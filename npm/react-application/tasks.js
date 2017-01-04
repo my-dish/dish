@@ -8,7 +8,7 @@ module.exports = {
     flow        : 'flow',
     'flow-typed': 'flow-typed install',
     lint        : 'npm run lint:js && npm run lint:css',
-    'lint:js'   : 'eslint src',
+    'lint:js'   : 'eslint .',
     'lint:css'  : 'stylelint src/**/*.css',
     start       : 'webpack-dev-server',
     test        : 'jest --coverage',

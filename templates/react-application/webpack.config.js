@@ -4,6 +4,7 @@ const path                     = require('path');
 const merge                    = require('webpack-merge');
 const webpack                  = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 // const ExtractTextPlugin       = require('extract-text-webpack-plugin');
 
 const config = process.env.NODE_ENV !== 'production' ?
@@ -16,9 +17,9 @@ const localIdentName = process.env.NODE_ENV !== 'production' ?
 
 const cssLoaders = [
   {
-    loader: 'css-loader',
+    loader : 'css-loader',
     options: {
-      modules: true,
+      modules      : true,
       importLoaders: 1,
       localIdentName
     }
@@ -29,11 +30,11 @@ const cssLoaders = [
 ];
 
 const common = {
-  bail: true,
+  bail  : true,
   target: 'web',
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path      : path.join(__dirname, 'dist'),
+    filename  : 'bundle.js',
     publicPath: '/dist/'
   },
   resolve: {
@@ -46,16 +47,17 @@ const common = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: 'babel-loader',
+        test   : /\.js$/,
+        use    : 'babel-loader',
         exclude: path.join(__dirname, 'node_modules')
       },
       {
         test: /\.css$/,
-        use: [
+        use : [
           'style-loader',
           ...cssLoaders
-        ],
+        ]
+
         // loader: ExtractTextPlugin.extract({
         //   fallbackLoader: 'style-loader',
         //   loader: cssLoaders
@@ -65,6 +67,7 @@ const common = {
   },
 
   plugins: [
+
     // new ExtractTextPlugin('styles.css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
@@ -72,7 +75,7 @@ const common = {
     new webpack.NoErrorsPlugin(),
     new CaseSensitivePathsPlugin()
   ],
-  performance: {hints: false}
+  performance: { hints: false }
 };
 
 module.exports = merge.smart(common, config);

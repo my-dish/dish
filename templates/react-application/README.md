@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <strong>the template for web application with React</strong>
+  <strong>the template for Web Application with React</strong>
 </div>
 
 <!-- travis https://travis-ci.org/ -->
@@ -19,8 +19,8 @@ $ open http://localhost:8080 # or http://localhost:8080/webpack-dev-server/
 
 ### Build
 Build as production.  
-Source codes is compressed by webpack.  
-If you don want to include the css in js, you can uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
+Source codes are compressed by webpack.  
+If you don't want to include the css in js, you should uncomment `extract-text-webpack-plugin` in `webpack.production.config.js`.
 ```
 $ npm run build
 ```

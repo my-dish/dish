@@ -20,7 +20,7 @@ $ open http://localhost:8080
 ```
 
 ### Build
-Create `lib` by babel.  
+Creates `lib` by babel.  
 `lib` is entry point of this library.
 ```
 $ npm run build
