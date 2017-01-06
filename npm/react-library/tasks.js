@@ -10,7 +10,7 @@ module.exports = {
     lint        : 'eslint .',
     test        : 'jest --coverage',
     'test:watch': 'jest --watch --coverage',
-    prepublish  : 'npm run babel',
+    prepublish  : 'npm run build',
     postcover   : 'nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov'
   }
 };
