@@ -1,7 +1,7 @@
 'use strict';
 
-const fs         = require('fs-extra');
 const path       = require('path');
+const fs         = require('fs-extra');
 const chalk      = require('chalk');
 const pathExists = require('path-exists');
 const npm        = require('./npm');
