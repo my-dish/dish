@@ -1,7 +1,7 @@
 {
   "name": "my-dish",
   "version": "1.2.0",
-  "description": "Generates various templates. Includes `web application with React`, `web application with React and Redux`, `React library`, `command line tool`.",
+  "description": "Generates various templates. React, React-Redux, CLI, React-library, etc...",
   "scripts": {
     "test": "NODE_ENV=test nyc ava",
     "test:watch": "NODE_ENV=test ava -w",

@@ -31,5 +31,29 @@ $ enjoy it!
 - [CLI](./template/cli)
 - [Plain](./template/plain)
 
+## Feature
+### Web Application
+#### JavaScript
+Use the latest technology!
+- es2015, es2016, es2017 and stage-1 of `babel`.
+- flowtype
+- webpack@beta
+- react-hot-loader@next
+- redux
+- immutable
+- reselect
+- axios
+- redux-devtools
+- jest
+- enzyme
+
+#### CSS
+Use postcss and [cssnext](http://cssnext.io/)!
+- postcss-cssnext
+- postcss-mixins
+- postcss-reporter
+- postcss-smart-import
+- postcss-browser-reporter
+
 ## CHANGELOG
 See the [CHANGELOG.md](./CHANGELOG.md).
