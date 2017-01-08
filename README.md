@@ -25,11 +25,11 @@ $ enjoy it!
 ```
 
 ## Included templates
-- [Web Application with React](./template/react-application)
-- [Web Application with React and Redux](./template/react-redux-application)
-- [React Library](./template/react-library)
-- [CLI](./template/cli)
-- [Plain](./template/plain)
+- [Web Application with React](./templates/react-application)
+- [Web Application with React and Redux](./templates/react-redux-application)
+- [React Library](./templates/react-library)
+- [CLI](./templates/cli)
+- [Plain](./templates/plain)
 
 ## Feature
 ### Web Application
