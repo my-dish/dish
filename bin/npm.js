@@ -13,9 +13,9 @@ module.exports = (projectName, projectPath, templateType) => {
   const author = (() => {
     const str = [];
 
-    if (npmrc['init.author.name'])  str.push(npmrc['init.author.name']);
+    if (npmrc['init.author.url']) str.push(`(${npmrc['init.author.url']})`);
+    if (npmrc['init.author.name']) str.push(npmrc['init.author.name']);
     if (npmrc['init.author.email']) str.push(`<${npmrc['init.author.email']}>`);
-    if (npmrc['init.author.url'])   str.push(`(${npmrc['init.author.url']})`);
 
     return str.join(' ');
   })();

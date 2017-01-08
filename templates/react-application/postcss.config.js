@@ -16,7 +16,7 @@ const devConfig = (webpack) => {
     plugins: [
       require('postcss-reporter'),
       require('postcss-browser-reporter'),
-      require('postcss-smart-import')({addDependencyTo: webpack}),
+      require('postcss-smart-import')({ addDependencyTo: webpack }),
       require('postcss-mixins'),
       require('postcss-cssnext')
     ]
@@ -26,7 +26,7 @@ const devConfig = (webpack) => {
 const prodConfig = (webpack) => {
   return {
     plugins: [
-      require('postcss-smart-import')({addDependencyTo: webpack}),
+      require('postcss-smart-import')({ addDependencyTo: webpack }),
       require('postcss-mixins'),
       require('postcss-cssnext')
     ]

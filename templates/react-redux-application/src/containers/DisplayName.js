@@ -1,9 +1,9 @@
 // @flow
 
-import type { AllStates } from '../types';
-
 import { connect } from 'react-redux';
 import Label from '../components/Label';
+
+import type { AllStates } from '../types';
 
 type State = {
   name: string;

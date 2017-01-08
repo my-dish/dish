@@ -1,9 +1,9 @@
 'use strict';
 
-const test     = require('ava');
 const path     = require('path');
-const pify     = require('pify');
 const execFile = require('child_process').execFile;
+const test     = require('ava');
+const pify     = require('pify');
 const packages = require('../package.json');
 
 const executionPath = path.join(__dirname, '..', 'bin', 'index.js');
