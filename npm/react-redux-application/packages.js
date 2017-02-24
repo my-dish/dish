@@ -27,7 +27,7 @@ module.exports = {
     'enzyme',
     'eslint',
     'eslint-config-sky',
-    'extract-text-webpack-plugin@beta',
+    'extract-text-webpack-plugin',
     'flow-bin',
     'flow-typed',
     'flow-status-webpack-plugin',
@@ -48,9 +48,9 @@ module.exports = {
     'postcss-reporter',
     'postcss-smart-import',
     'postcss-browser-reporter',
-    'webpack@beta',
+    'webpack',
     'webpack-dashboard',
-    'webpack-dev-server@beta',
+    'webpack-dev-server',
     'webpack-merge'
   ]
 };
