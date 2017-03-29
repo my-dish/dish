@@ -64,7 +64,7 @@
     "babel-eslint": "^7.2.1",
     "conventional-changelog-cli": "^1.2.0",
     "eslint": "^3.13.0",
-    "eslint-config-sky": "^1.4.3",
+    "eslint-config-sky": "^1.4.4",
     "nyc": "^10.2.0",
     "pify": "^2.3.0"
   },
