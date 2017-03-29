@@ -4,10 +4,6 @@ module.exports = {
   main: '',
   key : [
     {
-      files: [
-      ]
-    },
-    {
       keywords: []
     },
     {
