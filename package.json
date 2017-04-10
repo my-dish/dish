@@ -60,7 +60,7 @@
     "rc": "^1.2.0"
   },
   "devDependencies": {
-    "ava": "0.16.0",
+    "ava": "0.19.1",
     "babel-eslint": "^7.2.1",
     "conventional-changelog-cli": "^1.2.0",
     "eslint": "^3.13.0",
