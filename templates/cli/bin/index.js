@@ -2,9 +2,16 @@
 
 'use strict';
 
-const commands = process.argv.slice(2);
+const Cav = require('cav');
+const packageJson = require('../package.json');
 
-if (commands[0] === '-v' || commands[0] === '--version') {
-  console.log(`Version: ${require('../package.json').version}`);
-  process.exit(0);
-}
+const commands = {
+  'deploy <to> <env>'  : 'Deploy to ec2.',
+  '-c, --current-state': 'Show Current State.'
+};
+
+const cav = new Cav(commands, packageJson);
+
+cav.start((args) => {
+  console.log(args);
+});
