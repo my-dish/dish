@@ -1,5 +1,6 @@
 // @flow
 
+import * as Redux from 'redux';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Input from '../components/Input';
@@ -12,22 +13,21 @@ type Dispatch = {
 
 /**
  * @param {Allstates} state
+ * @return {Object}
  */
-const mapStateToProps: {} = (): State => {
-  return {};
-};
+const mapStateToProps = (): State => ({});
 
 /**
  * @param {Function} dispatch
  * @param {Object} props
+ * @return {Object}
+ * @return {string} updateName
  */
-const mapDispatchToProps = (dispatch): Dispatch => {
-  return {
-    updateName: (name: string) => {
-      dispatch(actions.updateName(name));
-    }
-  };
-};
+const mapDispatchToProps = (dispatch: Redux.Dispatch<*>): Dispatch => ({
+  updateName: (name: string) => {
+    dispatch(actions.updateName(name));
+  }
+});
 
 export default connect(
   mapStateToProps,

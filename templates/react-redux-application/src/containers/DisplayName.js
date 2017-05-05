@@ -13,26 +13,18 @@ type Dispatch = {};
 
 /**
  * @param {Allstates} state
+ * @return {Object} name
  */
-const mapStateToProps: {
-  name: string;
-} = (state: AllStates): State => {
-  const {
-    users
-  } = state;
-
-  return {
-    name: users.name
-  };
-};
+const mapStateToProps = (state: AllStates): State => ({
+  name: state.users.name
+});
 
 /**
  * @param {Function} dispatch
  * @param {Object} props
+ * @return {Object}
  */
-const mapDispatchToProps = (): Dispatch => {
-  return {};
-};
+const mapDispatchToProps = (): Dispatch => ({});
 
 export default connect(
   mapStateToProps,

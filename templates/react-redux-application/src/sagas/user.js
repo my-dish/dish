@@ -1,11 +1,17 @@
 // @flow
 
+import axios from 'axios';
+import { takeEvery, effects } from 'redux-saga';
+
 import type { Effect } from 'redux-saga';
 import type { UsersAction } from '../types';
 
-import axios from 'axios';
-import { takeEvery } from 'redux-saga';
-import { cancel, fork, put } from 'redux-saga/effects';
+
+const {
+  put,
+  fork,
+  cancel
+} = effects;
 
 /**
  * fetch from somewhere
@@ -45,7 +51,7 @@ function *updateNameFlow(action: UsersAction): Generator<Effect, void, *> {
 }
 
 /**
- * root
+ * Root for user
  */
 export default function *user(): Generator<Effect, void, *> {
   yield* takeEvery('UPDATE_NAME', updateNameFlow);

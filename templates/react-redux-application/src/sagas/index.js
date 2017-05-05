@@ -2,15 +2,15 @@
 
 import type { Effect } from 'redux-saga';
 
-import { fork } from 'redux-saga/effects';
+import { effects } from 'redux-saga';
 import user from './user';
 
 /**
- *
+ * Root for saga
  */
 function *rootSaga(): Generator<Effect, void, *> {
   yield [
-    fork(user)
+    effects.fork(user)
   ];
 }
 
