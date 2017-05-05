@@ -29,6 +29,11 @@ module.exports = (projectName, templateType, testDirPath) => {
     else if (process.env.NODE_ENV === 'development') debugMode(setting.templatePath);
     else productionMode(setting.templatePath);
 
+    // rename .npmignore to .gitignore
+    if (process.env.NODE_ENV !== 'test') {
+      fs.renameSync(`${process.cwd()}/.npmignore`, `${process.cwd()}/.gitignore`);
+    }
+
     console.log();
     console.log(`$ cd ${projectName}`);
     console.log('$ npm start');
