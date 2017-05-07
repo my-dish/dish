@@ -24,36 +24,13 @@ $ cd <project-directory>
 $ enjoy it!
 ```
 
-## Included templates
-- [Web Application with React](./templates/react-application)
-- [Web Application with React and Redux](./templates/react-redux-application)
-- [React Library](./templates/react-library)
-- [CLI](./templates/cli)
-- [Plain](./templates/plain)
-
-## Feature
-### Web Application
-#### JavaScript
-Use the latest technology!
-- es2015, es2016, es2017 and stage-1 of `babel`.
-- flowtype
-- webpack@beta
-- react-hot-loader@next
-- redux
-- immutable
-- reselect
-- axios
-- redux-devtools
-- jest
-- enzyme
-
-#### CSS
-Use postcss and [cssnext](http://cssnext.io/)!
-- postcss-cssnext
-- postcss-mixins
-- postcss-reporter
-- postcss-smart-import
-- postcss-browser-reporter
+## Templates
+- [@my-dish/template-plain](https://github.com/my-dish/template-plain)
+- [@my-dish/template-cli](https://github.com/my-dish/template-cli)
+- [@my-dish/template-react-application](https://github.com/my-dish/template-react-application)
+- [@my-dish/template-react-redux-application](https://github.com/my-dish/template-react-redux-application)
+- [@my-dish/template-react-library](https://github.com/my-dish/template-react-library)
+- [@my-dish/template-dish](https://github.com/my-dish/template-dish)
 
 ## CHANGELOG
 See the [CHANGELOG.md](./CHANGELOG.md).
