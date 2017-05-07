@@ -1,1 +1,0 @@
-export checkName from './checkName';
