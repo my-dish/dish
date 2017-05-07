@@ -23,14 +23,10 @@ inquirer.prompt([
     type   : 'list',
     name   : 'type',
     message: 'Which do you want to use?',
-    choices: [
-      'Web Application with React',
-      'Web Application with React and Redux',
-      'React Library',
-      'CLI',
-      'Plain'
-    ]
+    choices: router
   }
 ]).then((ans) => {
-  createStage(commands[0], router(ans.type).id);
+  const template = router.find((e) => e.name === ans.type);
+
+  createStage(commands[0], template);
 });

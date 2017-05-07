@@ -7,11 +7,12 @@ const pathExists = require('path-exists');
 const npm        = require('./npm');
 const router     = require('./router');
 
-module.exports = (projectName, templateType, testDirPath) => {
+module.exports = (projectName, template, testDirPath) => {
   const project = path.resolve(projectName);
 
   if (!pathExists.sync(project)) {
-    const setting     = router(templateType);
+    const url = template.url;
+
     const currentPath = process.cwd();
     const projectPath = testDirPath ? testDirPath : path.resolve(currentPath, project);
 
@@ -20,14 +21,16 @@ module.exports = (projectName, templateType, testDirPath) => {
 
     console.log(chalk.cyan('Installing packages.'));
 
-    if (process.env.NODE_ENV !== 'test') npm(projectName, project, setting.id);
+    if (process.env.NODE_ENV !== 'test') npm(projectName, project, url);
 
     console.log(chalk.cyan('Installed from npmjs.'));
     console.log(chalk.cyan('Making the stage.'));
 
-    if (process.env.NODE_ENV === 'test') debugMode(setting.templatePath, testDirPath);
-    else if (process.env.NODE_ENV === 'development') debugMode(setting.templatePath);
-    else productionMode(setting.templatePath);
+    // if (process.env.NODE_ENV === 'test') debugMode(setting.templatePath, testDirPath);
+    // else if (process.env.NODE_ENV === 'development') debugMode(setting.templatePath);
+    // else productionMode(setting.templatePath);
+
+    productionMode(url);
 
     // rename .npmignore to .gitignore
     if (process.env.NODE_ENV !== 'test') {
@@ -59,6 +62,6 @@ function debugMode(templatePath, testDirPath) {
  * @description copy the template for production
  */
 function productionMode(templatePath) {
-  fs.copySync(path.resolve('node_modules', 'my-dish', 'templates', 'common'), '.');
-  fs.copySync(path.resolve('node_modules', 'my-dish', 'templates', templatePath), '.');
+  fs.copySync(path.resolve('node_modules', '@my-dish/template-common', 'template'), '.');
+  fs.copySync(path.resolve('node_modules', templatePath, 'template'), '.');
 }
