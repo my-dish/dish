@@ -1,8 +1,9 @@
 'use strict';
 
-const fs     = require('fs');
-const path   = require('path');
-const packer = require('@my-dish/packer');
+const fs                = require('fs');
+const path              = require('path');
+const packer            = require('@my-dish/packer');
+const commandExistsSync = require('command-exists').sync;
 
 module.exports = (projectName, projectPath, templateURL) => {
 
@@ -15,7 +16,7 @@ module.exports = (projectName, projectPath, templateURL) => {
 
   fs.writeFileSync(path.join(projectPath, 'package.json'), packageJSON);
 
-  let command = 'yarn';
+  const command = commandExistsSync('yarn') ? 'yarn' : 'npm';
 
   packer.installPackages(
     command,
