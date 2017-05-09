@@ -18,6 +18,10 @@ module.exports = [
     url : '@my-dish/template-cli'
   },
   {
+    name: 'Electron',
+    url : '@my-dish/template-electron'
+  },
+  {
     name: 'Plain',
     url : '@my-dish/template-plain'
   },
