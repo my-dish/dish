@@ -30,6 +30,7 @@ $ enjoy it!
 - [@my-dish/template-react-application](https://github.com/my-dish/template-react-application)
 - [@my-dish/template-react-redux-application](https://github.com/my-dish/template-react-redux-application)
 - [@my-dish/template-react-library](https://github.com/my-dish/template-react-library)
+- [@my-dish/template-electron](https://github.com/my-dish/template-electron)
 - [@my-dish/template-dish](https://github.com/my-dish/template-dish)
 
 ## CHANGELOG
