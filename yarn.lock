@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@my-dish/packer@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@my-dish/packer/-/packer-0.0.2.tgz#d4818b9a6eb9e6684a6f493b4d684add31558535"
+"@my-dish/packer@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@my-dish/packer/-/packer-0.0.3.tgz#bc46f4ece0a31378788a3f17d06955ecc8bae40b"
   dependencies:
     cross-spawn "^5.1.0"
     rc "^1.2.1"
