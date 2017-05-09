@@ -1,26 +1,48 @@
 import test from 'ava';
 import router from '../bin/router';
 
-test('should return info of `Web Application with React`', (t) => {
-  const info = router(0);
+test('should return the number of router', (t) => {
+  t.is(router.length, 6);
+});
 
-  t.is(info.id, 0);
-  t.is(Object.keys(info.npm).length, 4);
-  t.is(info.templatePath, 'react-application');
+test('should return info of `Web Application with React`', (t) => {
+  const item = router[0];
+
+  t.is(item.name, 'Web Application with React and Redux');
+  t.is(item.url, '@my-dish/template-react-redux-application');
+});
+
+test('should return info of `Web Application with React`', (t) => {
+  const item = router[1];
+
+  t.is(item.name, 'Web Application with React');
+  t.is(item.url, '@my-dish/template-react-application');
 });
 
 test('should return info of `React Library`', (t) => {
-  const info = router(1);
+  const item = router[2];
 
-  t.is(info.id, 1);
-  t.is(Object.keys(info.npm).length, 4);
-  t.is(info.templatePath, 'react-library');
+  t.is(item.name, 'React Library');
+  t.is(item.url, '@my-dish/template-react-library');
 });
 
-test('should return info of `Command Line Tool`', (t) => {
-  const info = router(2);
+test('should return info of `CLI`', (t) => {
+  const item = router[3];
 
-  t.is(info.id, 2);
-  t.is(Object.keys(info.npm).length, 4);
-  t.is(info.templatePath, 'cli');
+  t.is(item.name, 'CLI');
+  t.is(item.url, '@my-dish/template-cli');
+});
+
+test('should return info of `Plain`', (t) => {
+  const item = router[4];
+
+  t.is(item.name, 'Plain');
+  t.is(item.url, '@my-dish/template-plain');
+});
+
+test('should return info of `Dish`', (t) => {
+  const item = router[5];
+
+  t.is(item.name, 'Dish');
+  t.is(item.url, '@my-dish/template-dish');
 });

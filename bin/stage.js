@@ -26,16 +26,10 @@ module.exports = (projectName, template, testDirPath) => {
     console.log(chalk.cyan('Installed from npmjs.'));
     console.log(chalk.cyan('Making the stage.'));
 
-    // if (process.env.NODE_ENV === 'test') debugMode(setting.templatePath, testDirPath);
-    // else if (process.env.NODE_ENV === 'development') debugMode(setting.templatePath);
-    // else productionMode(setting.templatePath);
-
-    productionMode(url);
+    copyTemplate(url);
 
     // rename .npmignore to .gitignore
-    if (process.env.NODE_ENV !== 'test') {
-      fs.renameSync(`${process.cwd()}/.npmignore`, `${process.cwd()}/.gitignore`);
-    }
+    fs.renameSync(`${process.cwd()}/.npmignore`, `${process.cwd()}/.gitignore`);
 
     console.log();
     console.log(`$ cd ${projectName}`);
@@ -49,19 +43,9 @@ module.exports = (projectName, template, testDirPath) => {
 };
 
 /**
- * @description copy the template for test or development
+ * @description copy the template
  */
-function debugMode(templatePath, testDirPath) {
-  const base = testDirPath ? testDirPath : '.';
-
-  fs.copySync(path.join(__dirname, '..', 'templates', 'common'), base);
-  fs.copySync(path.join(__dirname, '..', 'templates', templatePath), base);
-}
-
-/**
- * @description copy the template for production
- */
-function productionMode(templatePath) {
+function copyTemplate(templatePath) {
   fs.copySync(path.resolve('node_modules', '@my-dish/template-common', 'template'), '.');
   fs.copySync(path.resolve('node_modules', templatePath, 'template'), '.');
 }
