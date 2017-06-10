@@ -9,8 +9,8 @@ module.exports = (projectName, projectPath, templateURL) => {
 
   // install template
   packer.installTemplates(templateURL);
-
-  const npm = require(`${process.cwd()}/node_modules/${templateURL}/npm`);
+  const npm =
+    require(path.join(process.cwd(), 'node_modules', templateURL, 'npm'));
 
   const packageJSON = packer.createPackageJSON(npm, projectName);
 
@@ -24,8 +24,12 @@ module.exports = (projectName, projectPath, templateURL) => {
     npm.packages.devDependencies
   );
 
-  // yarn overwrites node_modules so dish reinstalls templates
+  // yarn and npm(over 5) overwrite node_modules so dish reinstalls templates
+  packer.installTemplates(templateURL);
+
   if (command === 'yarn') {
-    packer.installTemplates(templateURL);
+
+    // delete package-lock.json if npm version is over 5
+    fs.unlinkSync(path.join(process.cwd(), 'package-lock.json'));
   }
 };
