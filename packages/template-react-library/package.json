@@ -1,0 +1,27 @@
+{
+  "name": "@my-dish/template-react-library",
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "The template for React Library",
+  "files": [
+    "npm",
+    "template"
+  ],
+  "keywords": [
+    "react",
+    "library",
+    "template"
+  ],
+  "scripts": {
+    "test": "nyc ava"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true
+  }
+}

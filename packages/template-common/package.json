@@ -1,0 +1,15 @@
+{
+  "name": "@my-dish/template-common",
+  "version": "1.0.0",
+  "description": "common template for dish",
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "license": "MIT",
+  "keywords": [
+    "my-dish",
+    "template"
+  ],
+  "repository": {
+    "url": "git+https://github.com/my-dish/template-common.git",
+    "type": "git"
+  }
+}

@@ -1,0 +1,1 @@
+export checkName from './checkName';

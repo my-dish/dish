@@ -1,0 +1,8 @@
+@import "../../styles/variables";
+
+.title {
+  color: var(--text-color);
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
