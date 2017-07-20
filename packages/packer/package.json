@@ -1,0 +1,35 @@
+{
+  "name": "@my-dish/packer",
+  "main": "index.js",
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "version": "0.2.4",
+  "license": "MIT",
+  "description": "",
+  "keywords": [
+    "dish",
+    "package"
+  ],
+  "repository": {
+    "url": "git+https://github.com/my-dish/packer.git",
+    "type": "git"
+  },
+  "scripts": {
+    "test": "nyc ava"
+  },
+  "bin": {
+    "packer": "./bin/packer.js"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "tap": true,
+    "failFast": true,
+    "concurrency": 5
+  },
+  "dependencies": {
+    "cross-spawn": "^5.1.0",
+    "fs-extra": "^3.0.1",
+    "rc": "^1.2.1"
+  }
+}

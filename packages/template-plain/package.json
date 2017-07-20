@@ -1,0 +1,26 @@
+{
+  "name": "@my-dish/template-plain",
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "version": "1.1.0",
+  "license": "MIT",
+  "description": "General template for dish",
+  "files": [
+    "npm",
+    "template"
+  ],
+  "keywords": [
+    "template",
+    "dish"
+  ],
+  "scripts": {
+    "test": "nyc ava"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true
+  }
+}

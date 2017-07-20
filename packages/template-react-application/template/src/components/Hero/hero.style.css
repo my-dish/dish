@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+  border-radius: 10px;
+  display: flex;
+  margin: auto;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  @mixin hero-background;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}

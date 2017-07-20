@@ -1,0 +1,27 @@
+{
+  "name": "@my-dish/template-cli",
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "CLI template for dish",
+  "files": [
+    "npm",
+    "template"
+  ],
+  "keywords": [
+    "my-dish",
+    "cli",
+    "template"
+  ],
+  "scripts": {
+    "test": "nyc ava"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true
+  }
+}

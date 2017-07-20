@@ -1,0 +1,24 @@
+{
+  "presets": [
+    ["env", {
+      "target": "electron"
+    }],
+    "flow",
+    "react",
+    "stage-1"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "babel-plugin-dynamic-import-node",
+        "transform-es2015-modules-commonjs"
+      ]
+    },
+    "development": {
+      "plugins": ["react-hot-loader/babel"]
+    },
+    "production": {
+      "presets": ["react-optimize"]
+    }
+  }
+}

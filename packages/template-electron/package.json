@@ -1,0 +1,27 @@
+{
+  "name": "@my-dish/template-electron",
+  "author": "abouthiroppy <git@about-hiroppy.com http://about-hiroppy.com",
+  "version": "1.0.3",
+  "license": "MIT",
+  "description": "The template for electron",
+  "files": [
+    "npm",
+    "template"
+  ],
+  "keywords": [
+    "electron",
+    "template"
+  ],
+  "scripts": {
+    "test": "nyc ava",
+    "debug": "packer --debug"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true
+  }
+}
