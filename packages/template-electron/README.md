@@ -1,6 +1,5 @@
 # Electron
 
-[![Build Status](https://travis-ci.org/my-dish/template-electron.svg?branch=master)](https://travis-ci.org/my-dish/template-electron)
 <!-- npm version badge: https://badge.fury.io/ -->
 
 ## Install
