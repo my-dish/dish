@@ -1,7 +1,6 @@
 sudo: false
 language: node_js
 cache:
-  yarn: true
   directories:
     - node_modules
 node_js:
@@ -10,8 +9,6 @@ node_js:
 os:
   - linux
 before_script:
-  - yarn install
-  - yarn link || true
   - npm test
   - npm run lint
 after_success:

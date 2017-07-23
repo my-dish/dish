@@ -20,7 +20,9 @@ const middlewares: Array<Function> = [
 
 const enhancer = compose(
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(applyMiddleware(...middlewares)) :
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(
+      applyMiddleware(...middlewares)
+    ) :
     applyMiddleware(...middlewares)
 );
 

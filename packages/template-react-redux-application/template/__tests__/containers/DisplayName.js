@@ -12,7 +12,6 @@ const createFakeStore = (state) => ({
 });
 
 describe('DisplayName component', () => {
-  let props;
   let wrapper;
 
   beforeEach(() => {

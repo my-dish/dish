@@ -6,6 +6,7 @@
   "scripts": {
     "test": "lerna run test",
     "lint": "eslint .",
+    "changelog": "lerna-changelog",
     "bootstrap": "lerna bootstrap"
   },
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",

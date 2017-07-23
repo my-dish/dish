@@ -1,12 +1,11 @@
 'use strict';
 
-const Listr = require('listr');
-const path = require('path');
-const chalk = require('chalk');
+const path       = require('path');
+const Listr      = require('listr');
+const chalk      = require('chalk');
 const pathExists = require('path-exists');
-const stage = require('./stage');
-
-const npm = require('./npm');
+const stage      = require('./stage');
+const npm        = require('./npm');
 
 function rootTasks(projectName, template) {
   let projectPath;

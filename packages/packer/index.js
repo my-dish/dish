@@ -1,6 +1,5 @@
 'use strict';
 
-const path      = require('path');
 const rc        = require('rc');
 const { spawn } = require('child-process-promise');
 
