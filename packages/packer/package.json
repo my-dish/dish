@@ -28,7 +28,7 @@
     "concurrency": 5
   },
   "dependencies": {
-    "cross-spawn": "^5.1.0",
+    "child-process-promise": "^2.2.1",
     "fs-extra": "^3.0.1",
     "rc": "^1.2.1"
   }
