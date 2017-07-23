@@ -2,9 +2,9 @@
 
 'use strict';
 
-const inquirer    = require('inquirer');
-const router      = require('./router');
-const createStage = require('./stage');
+const inquirer = require('inquirer');
+const tasks    = require('./tasks');
+const router   = require('./router');
 
 const commands = process.argv.slice(2);
 
@@ -28,5 +28,5 @@ inquirer.prompt([
 ]).then((ans) => {
   const template = router.find((e) => e.name === ans.type);
 
-  createStage(commands[0], template);
+  tasks(commands[0], template);
 });

@@ -5,31 +5,49 @@ const path              = require('path');
 const packer            = require('@my-dish/packer');
 const commandExistsSync = require('command-exists').sync;
 
-module.exports = (projectName, projectPath, templateURL) => {
-
-  // install template
-  packer.installTemplates(templateURL);
-  const npm =
-    require(path.join(process.cwd(), 'node_modules', templateURL, 'npm'));
-
-  const packageJSON = packer.createPackageJSON(npm, projectName);
-
-  fs.writeFileSync(path.join(projectPath, 'package.json'), packageJSON);
-
+function installPackages(templateURL) {
   const command = commandExistsSync('yarn') ? 'yarn' : 'npm';
 
-  packer.installPackages(
+  const npm = require(
+    path.join(process.cwd(), 'node_modules', templateURL, 'npm')
+  );
+
+  return packer.installPackages(
     command,
     npm.packages.dependencies,
     npm.packages.devDependencies
   );
+}
 
-  // yarn and npm(over 5) overwrite node_modules so dish reinstalls templates
-  packer.installTemplates(templateURL);
+function installTemplates(templateURL) {
+  return packer.installTemplates(templateURL);
+}
 
-  if (command === 'yarn') {
+// yarn and npm(over 5) overwrite node_modules so dish reinstalls templates
+function uninstallTemplates(templateURL) {
 
-    // delete package-lock.json if npm version is over 5
-    fs.unlinkSync(path.join(process.cwd(), 'package-lock.json'));
-  }
+  // if (command === 'yarn') {
+  //
+  //   // delete package-lock.json if npm version is over 5
+  //   fs.unlinkSync(path.join(process.cwd(), 'package-lock.json'));
+  // }
+
+  return packer.uninstallTemplates(templateURL);
+}
+
+function createPackageJSON(projectName, projectPath, templateURL) {
+  const npm = require(
+    path.join(process.cwd(), 'node_modules', templateURL, 'npm')
+  );
+
+  const packageJSON = packer.createPackageJSON(npm, projectName);
+
+  fs.writeFileSync(path.join(projectPath, 'package.json'), packageJSON);
+}
+
+module.exports = {
+  installPackages,
+  installTemplates,
+  createPackageJSON,
+  uninstallTemplates
 };

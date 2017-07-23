@@ -2,7 +2,7 @@
 
 module.exports = {
   scripts: {
-    test: 'nyc ava',
+    test : 'nyc ava',
     debug: 'packer --debug'
   }
 };
