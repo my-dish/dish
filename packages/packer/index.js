@@ -1,8 +1,8 @@
 'use strict';
 
-const path  = require('path');
-const rc    = require('rc');
-const spawn = require('cross-spawn');
+const path      = require('path');
+const rc        = require('rc');
+const { spawn } = require('child-process-promise');
 
 /**
  * execute install
@@ -16,25 +16,25 @@ function install(command, args) {
     if (args[0] === '-S') {
       args.shift();
 
-      spawn.sync('yarn', [
+      return spawn('yarn', [
         'add',
         ...args
-      ], { stdio: 'inherit' });
+      ]);
     }
     if (args[0] === '-D') {
       args[0] = '--dev';
 
-      spawn.sync('yarn', [
+      return spawn('yarn', [
         'add',
         ...args
-      ], { stdio: 'inherit' });
+      ]);
     }
   }
   else {
-    spawn.sync('npm', [
+    return spawn('npm', [
       'install',
       ...args
-    ], { stdio: 'inherit' });
+    ]);
   }
 }
 
@@ -43,23 +43,11 @@ function install(command, args) {
  * @param {Array<string>} dependencies
  * @param {Array<string>} devDependencies
  */
-function installPackages(command, dependencies, devDependencies) {
-
-  // install dependencies
-  if (Array.isArray(dependencies)) {
-    install(command, [
-      '-S',
-      ...dependencies
-    ]);
-  }
-
-  // install devDependencies
-  if (Array.isArray(devDependencies)) {
-    install(command, [
-      '-D',
-      ...devDependencies
-    ]);
-  }
+function installPackages(command, dependencies = [], devDependencies = []) {
+  return Promise
+    .resolve()
+    .then(() => install(command, ['-S', ...dependencies]))
+    .then(() => install(command, ['-D', ...devDependencies]));
 }
 
 /**
@@ -68,7 +56,7 @@ function installPackages(command, dependencies, devDependencies) {
 function installTemplates(templateURL) {
   const commonURL = '@my-dish/template-common';
 
-  install('npm', [
+  return install('npm', [
     commonURL,
     templateURL
   ]);
@@ -80,11 +68,11 @@ function installTemplates(templateURL) {
 function uninstallTemplates(templateURL) {
   const commonURL = '@my-dish/template-common';
 
-  spawn.sync('npm', [
+  return spawn('npm', [
     'uninstall',
     commonURL,
     templateURL
-  ], { stdio: 'inherit' });
+  ]);
 }
 
 /**
