@@ -1,6 +1,6 @@
 {
   "name": "@my-dish/template-dish",
-  "version": "2.0.1-0",
+  "version": "2.1.0",
   "description": "Dish template for dish",
   "scripts": {
     "test": "nyc ava"
