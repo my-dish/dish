@@ -1,7 +1,7 @@
 {
   "name": "@my-dish/template-react-library",
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "license": "MIT",
   "description": "The template for React Library",
   "files": [
