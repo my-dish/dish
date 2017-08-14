@@ -2,5 +2,5 @@
   "rules": {
     "no-console": 1
   },
-  "extends": "sky/react"
+  "extends": "sky"
 }

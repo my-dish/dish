@@ -14,7 +14,8 @@
     "template"
   ],
   "scripts": {
-    "test": "nyc ava"
+    "test": "nyc ava",
+    "debug": "packer --debug"
   },
   "ava": {
     "files": [

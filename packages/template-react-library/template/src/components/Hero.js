@@ -12,7 +12,7 @@ type Props = {
 
 const Hero = (props: Props) => (
   <div className={classnames(props.className, 'container')}>
-    <h1 style={Object.assign({}, defaultStyle.label, props.style)}>
+    <h1 style={{...defaultStyle.label, ...props.style}}>
       Hello:)
     </h1>
   </div>

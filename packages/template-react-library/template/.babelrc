@@ -2,10 +2,12 @@
   "presets": [
     "latest",
     "stage-1",
-    "react"
+    "react",
+    "flow"
   ],
-  "plugins": [
-    "syntax-flow",
-    "transform-flow-strip-types"
-  ]
+  "env": {
+    "production": {
+      "presets": ["react-optimize"]
+    }
+  }
 }

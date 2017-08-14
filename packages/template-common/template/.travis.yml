@@ -9,6 +9,7 @@ node_js:
 os:
   - linux
 before_script:
+  - npm install
   - npm test
   - npm run lint
 after_success:
