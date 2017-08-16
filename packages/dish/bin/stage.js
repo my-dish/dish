@@ -22,7 +22,11 @@ function createProject(project) {
 
 // rename .npmignore to .gitignore
 function renameIgnoreFile() {
-  fs.renameSync(`${process.cwd()}/.npmignore`, `${process.cwd()}/.gitignore`);
+  const npmignore = `${process.cwd()}/.npmignore`;
+
+  fs.ensureFile(npmignore, (err) => {
+    fs.renameSync(npmignore, `${process.cwd()}/.gitignore`);
+  });
 }
 
 module.exports = {
