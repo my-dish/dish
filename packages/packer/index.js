@@ -89,11 +89,15 @@ function createPackageJSON(npm, projectName) {
     ).trim();
 
   const packageInfo = {
-    name       : projectName,
-    main       : npm.settings.main,
-    author     : author,
-    version    : '0.0.1',
-    license    : npmrc['init.license'] || 'ISC',
+    name      : projectName,
+    main      : npm.settings.main,
+    author    : author,
+    version   : '0.0.1',
+    license   : npmrc['init.license'] || 'ISC',
+    repository: {
+      url : 'git+https://github.com/<user>/<project>.git',
+      type: 'git'
+    },
     description: ''
   };
 
