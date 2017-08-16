@@ -1,6 +1,6 @@
 {
   "name": "my-dish",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Generates various templates. React, React-Redux, CLI, React-library, etc...",
   "scripts": {
     "test": "nyc ava"
