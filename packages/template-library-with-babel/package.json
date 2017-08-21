@@ -1,0 +1,29 @@
+{
+  "name": "template-library-with-babel",
+  "author": "abouthiroppy <git@about-hiroppy.com http://about-hiroppy.com",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/<user>/<project>.git",
+    "type": "git"
+  },
+  "description": "",
+  "files": [
+    "npm",
+    "template"
+  ],
+  "keywords": [],
+  "scripts": {
+    "test": "nyc ava",
+    "debug": "packer --debug"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true
+  },
+  "dependencies": {}
+}
