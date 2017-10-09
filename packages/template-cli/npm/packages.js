@@ -6,7 +6,6 @@ module.exports = {
   ],
   devDependencies: [
     'ava@0.16.0', // [TODO] do a search
-    'cav',
     'conventional-changelog-cli',
     'eslint',
     'eslint-config-sky',
