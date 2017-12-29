@@ -1,21 +1,13 @@
 {
   "name": "@my-dish/generator-cli",
-  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
-  "version": "2.4.3",
-  "license": "MIT",
-  "description": "CLI template for dish",
-  "files": [
-    "npm",
-    "template"
-  ],
-  "keywords": [
-    "my-dish",
-    "cli",
-    "template"
-  ],
+  "version": "0.0.0",
+  "description": "",
+  "main": "generators/index.js",
   "scripts": {
-    "test": "nyc ava"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "license": "MIT",
   "ava": {
     "files": [
       "test/**/*.js"
@@ -23,5 +15,13 @@
     "concurrency": 5,
     "failFast": true,
     "tap": true
+  },
+  "repository": "git@github.com:my-dish/dish.git",
+  "dependencies": {
+    "yeoman-generator": "^2.0.2"
+  },
+  "devDependencies": {
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
   }
 }
