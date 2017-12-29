@@ -1,0 +1,22 @@
+{
+  "name": "<%= projectName %>",
+  "version": "0.0.0",
+  "description": "",
+  "main": "bin/cli.js",
+  "scripts": {
+    "test": "ava",
+    "lint": "eslint .",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "bin": {
+    "<%= commandName %>": "bin/cli.js"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true
+  }
+}
