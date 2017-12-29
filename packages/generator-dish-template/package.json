@@ -1,0 +1,28 @@
+{
+  "name": "@my-dish/generator-dish-template",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "Yuta Hiroto",
+    "email": "git@about-hiroppy.com",
+    "url": ""
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1"
+  },
+  "repository": "git@github.com:my-dish/dish.git",
+  "license": "MIT"
+}

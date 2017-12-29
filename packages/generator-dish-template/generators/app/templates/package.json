@@ -1,0 +1,21 @@
+{
+  "name": "@my-dish/generator-<%= generatorName %>",
+  "version": "0.0.0",
+  "description": "",
+  "main": "generators/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "license": "MIT",
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true
+  },
+  "repository": "git@github.com:my-dish/dish.git",
+  "dependencies": {}
+}

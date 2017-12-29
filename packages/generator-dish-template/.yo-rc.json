@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Yuta Hiroto",
+      "authorEmail": "git@about-hiroppy.com",
+      "authorUrl": ""
+    }
+  }
+}
