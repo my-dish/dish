@@ -4,7 +4,7 @@
   "description": "a mono repo of my-dish",
   "main": "index.js",
   "scripts": {
-    "test": "lerna run test",
+    "test": "ava ",
     "lint": "eslint .",
     "changelog": "lerna-changelog",
     "bootstrap": "lerna bootstrap"
@@ -25,5 +25,13 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-react": "^7.1.0",
     "nyc": "^11.1.0"
+  },
+  "ava": {
+    "files": [
+      "packages/*/test/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true
   }
 }
