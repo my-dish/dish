@@ -3,37 +3,22 @@
 const Generator = require('yeoman-generator');
 
 const dependencies = [];
-const devDependencies = [
-  'ava',
-  'nyc',
-  'eslint',
-  'eslint-config-sky',
-  'conventional-changelog-cli'
-];
+const devDependencies = [];
 
 class Yo extends Generator {
-  prompting() {
-    const prompts = [{
-      type: 'input',
-      name: 'projectName',
-      message: 'What is the name of the project?'
-    }];
-
-    return this.prompt(prompts).then((props) => {
-      this.props = props;
-    });
-  }
-
-  async writing() {
-    const username = await this.user.github.username();
+  writing() {
+    this.composeWith(
+      require.resolve('@my-dish/common'),
+      {
+        dish: {
+          tester: 'ava'
+        }
+      }
+    );
 
     this.fs.copyTpl(
       this.templatePath('**/*'),
-      this.destinationPath('.'),
-      {
-        username,
-        projectName: this.props.projectName,
-      }
+      this.destinationPath('.')
     );
   }
 

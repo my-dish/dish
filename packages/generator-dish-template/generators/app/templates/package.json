@@ -2,7 +2,7 @@
   "name": "@my-dish/generator-<%= generatorName %>",
   "version": "0.0.0",
   "description": "",
-  "main": "generators/index.js",
+  "main": "generators/app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
