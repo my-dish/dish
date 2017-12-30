@@ -1,0 +1,1 @@
+# @my-dish/generator-common

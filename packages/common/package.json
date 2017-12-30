@@ -1,8 +1,8 @@
 {
-  "name": "@my-dish/generator-cli",
-  "version": "0.0.0",
+  "name": "@my-dish/common",
+  "version": "0.0.1",
   "description": "",
-  "main": "generators/cli/index.js",
+  "main": "generators/app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +18,6 @@
   },
   "repository": "git@github.com:my-dish/dish.git",
   "dependencies": {
-    "@my-dish/common": "0.0.1",
     "yeoman-generator": "^2.0.2"
   },
   "devDependencies": {

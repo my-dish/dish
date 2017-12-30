@@ -3,23 +3,12 @@
 const Generator = require('yeoman-generator');
 
 const dependencies = [];
-
-const devDependencies = [
-  'ava',
-  'nyc',
-  'eslint',
-  'eslint-config-sky',
-  'conventional-changelog-cli'
-];
+const devDependencies = [];
 
 class Yo extends Generator {
   prompting() {
     const prompts = [
       {
-        type: 'input',
-        name: 'projectName',
-        message: 'What is the name of the project?'
-      }, {
         type: 'input',
         name: 'commandName',
         message: 'What is the name of the command?'
@@ -44,6 +33,18 @@ class Yo extends Generator {
   }
 
   writing() {
+    this.composeWith(
+      require.resolve('@my-dish/common'),
+      {
+        dish: {
+          tester: 'ava',
+          extension: {
+            bin: './bin/index.js'
+          }
+        }
+      }
+    );
+
     this.fs.copyTpl(
       this.templatePath('**/*'),
       this.destinationPath('.'),
