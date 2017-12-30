@@ -6,6 +6,11 @@ const Generator = require('yeoman-generator');
 
 class Yo extends Generator {
   prompting() {
+    if (this.options.template) {
+      this.props = { template: this.options.template };
+      return;
+    }
+
     const prompts = [{
       type: 'list',
       name: 'template',
@@ -25,11 +30,13 @@ class Yo extends Generator {
   }
 
   writing() {
+    this.options.path = this.options.path || '.';
+
     switch (this.props.template) {
       case 'component':
         this.composeWith(
           '@my-dish/react-redux:component',
-          {},
+          { path: this.options.path },
           { local: require.resolve('../component') }
         );
         break;
