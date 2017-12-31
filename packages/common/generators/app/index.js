@@ -25,25 +25,60 @@ class Yo extends Generator {
   async writing() {
     const username = await this.user.github.username();
 
-    switch (this.options.dish.tester) {
-      case 'ava':
-        devDependencies.push('ava', 'nyc');
-        break;
-      case 'jest':
-        devDependencies.push('jest');
-        break;
-    }
+    this.fs.copyTpl(
+      this.templatePath('**/.*'),
+      this.destinationPath('.')
+    );
 
     this.fs.copyTpl(
-      this.templatePath('**/*'),
-      this.destinationPath('.'),
+      this.templatePath('README.md'),
+      this.destinationPath('README.md'),
       {
         username,
-        tester: this.options.dish.tester,
-        extension: this.options.dish.extension || {},
         projectname: this.props.projectname
       }
     );
+
+    this.fs.copyTpl(
+      this.templatePath('LICENSE'),
+      this.destinationPath('LICENSE')
+    );
+
+    const pkg = this.fs.readJSON(this.templatePath('package.json'), {});
+
+    pkg.name = this.props.projectname;
+
+    Object.assign(pkg, this.options.dish.extension || {});
+
+    switch (this.options.dish.tester) {
+      case 'ava':
+        devDependencies.push('ava', 'nyc');
+        pkg.scripts.test = 'nyc ava';
+        pkg.ava = {
+          files: [
+            'test/**/*.js',
+            '!test/helper/*.js'
+          ],
+          tap: true,
+          failFast: true,
+          concurrency: 5
+        };
+        break;
+      case 'jest':
+        devDependencies.push('jest');
+        pkg.scripts.test = 'jest --coverage';
+        pkg.jest = {
+          moduleNameMapper: {
+            '^.+\\.(css)$': 'identity-obj-proxy'
+          },
+          moduleFileExtensions: [
+            'js'
+          ]
+        };
+        break;
+    }
+
+    this.fs.writeJSON(this.destinationPath('package.json'), pkg);
   }
 
   install() {
