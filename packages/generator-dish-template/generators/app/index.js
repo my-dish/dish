@@ -7,17 +7,13 @@ const dependencies = [
   'yeoman-generator'
 ];
 
-const devDependencies = [
-  'yeoman-test',
-  'yeoman-assert'
-];
-
 class Yo extends Generator {
   prompting() {
     const prompts = [{
       type: 'input',
       name: 'generatorName',
-      message: 'What is the name of the generator?'
+      message: 'What is the name of the generator?',
+      default: 'generator'
     }];
 
     return this.prompt(prompts).then((props) => {
@@ -35,7 +31,6 @@ class Yo extends Generator {
 
   install() {
     this.runInstall('npm', dependencies);
-    this.runInstall('npm', devDependencies, { 'save-dev': true });
   }
 };
 

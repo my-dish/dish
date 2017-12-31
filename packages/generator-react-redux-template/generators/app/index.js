@@ -16,19 +16,21 @@ class Yo extends Generator {
       return;
     }
 
-    const prompts = [{
-      type: 'list',
-      name: 'template',
-      message: 'Which template do you create?',
-      choices: [
-        'component',
-        'container',
-        'reducer',
-        'action',
-        'store', // TODO: add
-        'middleware'
-      ]
-    }];
+    const prompts = [
+      {
+        type: 'list',
+        name: 'template',
+        message: 'Which template do you create?',
+        choices: [
+          'component',
+          'container',
+          'reducer',
+          'action',
+          'store', // TODO: add
+          'middleware'
+        ]
+      }
+    ];
 
     return this.prompt(prompts).then((props) => {
       this.props = props;

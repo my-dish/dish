@@ -11,6 +11,8 @@ async function run(obj) {
   return await helper.run(obj.path)
     .withPrompts(obj.prompts)
     .inTmpDir((dir) => tmpPath = dir)
+
+    // .then(() => console.log(tmpPath))
     .then(() => assert.file(obj.files))
     .then(() => {
       const files = {};

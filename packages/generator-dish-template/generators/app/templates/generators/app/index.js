@@ -2,19 +2,19 @@
 
 const Generator = require('yeoman-generator');
 
-const dependencies = [
-];
-const devDependencies = [
-];
+const dependencies = [];
+const devDependencies = [];
 
 class Yo extends Generator {
   prompting() {
 
-    // const prompts = [{
-    //   type: 'input',
-    //   name: 'projectName',
-    //   message: 'What is the name of the project?'
-    // }];
+    // const prompts = [
+    //   {
+    //     type: 'input',
+    //     name: 'projectName',
+    //     message: 'What is the name of the project?'
+    //   }
+    // ];
     //
     // return this.prompt(prompts).then((props) => {
     //   this.props = props;
