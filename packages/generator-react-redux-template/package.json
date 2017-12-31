@@ -6,9 +6,7 @@
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
   "license": "MIT",
   "repository": "git@github.com:my-dish/dish.git",
-  "dependencies": {},
-  "devDependencies": {
-    "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^1.7.0"
+  "dependencies": {
+    "yeoman-generator": "^2.0.2"
   }
 }
