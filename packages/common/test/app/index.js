@@ -4,6 +4,14 @@ import checkFiles from '../../../../test/check-files';
 
 let tmpPath;
 
+const files = [
+  'LICENSE',
+  '.editorconfig',
+  '.travis.yml',
+  'README.md',
+  'package.json'
+];
+
 test.afterEach(async () => {
   await checkFiles.after(tmpPath);
 });
@@ -11,7 +19,7 @@ test.afterEach(async () => {
 test.serial('should return template files', async (t) => {
   const res = await checkFiles.run({
     path: path.join(__dirname, '../../generators/app'),
-    files: ['LICENSE', 'README.md', 'package.json'],
+    files,
     options: {
       dish: {tester: 'ava'}
     }
@@ -27,7 +35,7 @@ test.serial('should return template files', async (t) => {
 test.serial('should rename the file name', async (t) => {
   const res = await checkFiles.run({
     path: path.join(__dirname, '../../generators/app'),
-    files: ['LICENSE', 'README.md', 'package.json'],
+    files,
     options: {
       dish: {tester: 'ava'}
     },
@@ -44,7 +52,7 @@ test.serial('should rename the file name', async (t) => {
 test.serial('should use jest', async (t) => {
   const res = await checkFiles.run({
     path: path.join(__dirname, '../../generators/app'),
-    files: ['LICENSE', 'README.md', 'package.json'],
+    files,
     options: {
       dish: {tester: 'jest'}
     }
@@ -58,7 +66,7 @@ test.serial('should use jest', async (t) => {
 test.serial('should expand package.json', async (t) => {
   const res = await checkFiles.run({
     path: path.join(__dirname, '../../generators/app'),
-    files: ['LICENSE', 'README.md', 'package.json'],
+    files,
     options: {
       dish: {
         extension: {

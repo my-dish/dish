@@ -1,39 +1,10 @@
 {
-  "name": "<%= projectname %>",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    <% if (tester === 'ava') { %>
-    "test": "nyc ava",
-    <% } else if (tester === 'jest') { %>
-    "test": "jest --coverage",
-    <% } %>
     "lint": "eslint .",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
-  <% if (tester === 'ava') { %>
-  "ava": {
-    "files": [
-      "test/**/*.js",
-      "!test/helper/*.js"
-    ],
-    "tap": true,
-    "failFast": true,
-    "concurrency": 5
-  },
-  <% } else if (tester === 'jest') { %>
-  "jest": {
-    "moduleNameMapper": {
-      "^.+\\.(css)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "js"
-    ]
-  },
-  <% } %>
-  <% if (Object.keys(extension).length !== 0) { %>
-  <%- `${JSON.stringify(extension, null, 2).slice(1).slice(0, -1)},` %>
-  <% } %>
   "keywords": []
 }
