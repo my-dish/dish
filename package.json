@@ -4,7 +4,7 @@
   "description": "a mono repo of my-dish",
   "main": "index.js",
   "scripts": {
-    "test": "ava ",
+    "test": "nyc ava",
     "lint": "eslint .",
     "changelog": "lerna-changelog",
     "bootstrap": "lerna bootstrap"
@@ -12,7 +12,6 @@
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
   "license": "MIT",
   "dependencies": {
-    "@my-dish/packer": "^2.1.0",
     "lerna": "^2.0.0"
   },
   "devDependencies": {
@@ -24,7 +23,11 @@
     "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-react": "^7.1.0",
-    "nyc": "^11.1.0"
+    "nyc": "^11.1.0",
+    "rimraf": "^2.6.2",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-environment": "^2.0.5",
+    "yeoman-test": "^1.7.0"
   },
   "ava": {
     "files": [

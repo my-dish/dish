@@ -39,8 +39,10 @@ class Yo extends Generator {
       componentname
     } = this.props;
 
+    this.options.path = this.options.path || '.';
+
     this.fs.copyTpl(
-      this.templatePath('_Component.js'),
+      this.templatePath('Component.js'),
       this.destinationPath(path.join(this.options.path, `${componentname}.js`)),
       {
         style,
