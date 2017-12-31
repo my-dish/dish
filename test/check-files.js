@@ -9,7 +9,8 @@ async function run(obj) {
   let tmpPath;
 
   return await helper.run(obj.path)
-    .withPrompts(obj.prompts)
+    .withOptions(obj.options || {})
+    .withPrompts(obj.prompts || {})
     .inTmpDir((dir) => tmpPath = dir)
 
     // .then(() => console.log(tmpPath))

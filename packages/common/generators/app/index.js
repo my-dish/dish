@@ -13,6 +13,7 @@ class Yo extends Generator {
     const prompts = [{
       type: 'input',
       name: 'projectname',
+      default: 'app',
       message: 'What is the name of the project?'
     }];
 
