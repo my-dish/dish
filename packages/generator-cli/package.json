@@ -1,28 +1,13 @@
 {
   "name": "@my-dish/generator-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "generators/cli/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "generators/app/index.js",
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
   "license": "MIT",
-  "ava": {
-    "files": [
-      "test/**/*.js"
-    ],
-    "concurrency": 5,
-    "failFast": true,
-    "tap": true
-  },
   "repository": "git@github.com:my-dish/dish.git",
   "dependencies": {
     "@my-dish/common": "0.0.1",
     "yeoman-generator": "^2.0.2"
-  },
-  "devDependencies": {
-    "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^1.7.0"
   }
 }
