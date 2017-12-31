@@ -1,6 +1,6 @@
 {
   "name": "<%= projectname %>",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   <% } %>
   <% if (Object.keys(extension).length !== 0) { %>
-  <%- JSON.stringify(extension, null, 2).slice(1).slice(0, -1).join(',') %>
+  <%- `${JSON.stringify(extension, null, 2).slice(1).slice(0, -1)},` %>
   <% } %>
   "keywords": []
 }

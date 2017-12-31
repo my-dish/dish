@@ -2,7 +2,6 @@
 
 const Generator = require('yeoman-generator');
 
-const dependencies = [];
 const devDependencies = [
   'eslint',
   'eslint-config-sky',
@@ -47,8 +46,6 @@ class Yo extends Generator {
   }
 
   install() {
-
-    // this.runInstall('npm', dependencies);
     this.runInstall('npm', devDependencies, { 'save-dev': true });
   }
 };
