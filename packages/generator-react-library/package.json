@@ -1,22 +1,13 @@
 {
-  "name": "@my-dish/template-react-library",
-  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
-  "version": "2.4.3",
-  "license": "MIT",
-  "description": "The template for React Library",
-  "files": [
-    "npm",
-    "template"
-  ],
-  "keywords": [
-    "react",
-    "library",
-    "template"
-  ],
+  "name": "@my-dish/generator-react-library",
+  "version": "0.0.1",
+  "description": "",
+  "main": "generators/app/index.js",
   "scripts": {
-    "test": "nyc ava",
-    "debug": "packer --debug"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "license": "MIT",
   "ava": {
     "files": [
       "test/**/*.js"
@@ -24,5 +15,17 @@
     "concurrency": 5,
     "failFast": true,
     "tap": true
+  },
+  "repository": "git@github.com:my-dish/dish.git",
+  "dependencies": {
+    "@my-dish/common": "0.0.1",
+    "@my-dish/generator-babel-template": "0.0.1",
+    "@my-dish/generator-react-redux-template": "0.0.1",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^2.0.2"
+  },
+  "devDependencies": {
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
   }
 }
