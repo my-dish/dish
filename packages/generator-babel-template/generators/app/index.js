@@ -35,6 +35,13 @@ const presets = [
 
 class Yo extends Generator {
   prompting() {
+    if (Array.isArray(this.options.packages)) {
+      devDependencies.push(...this.options.packages);
+      this.props = { packages: this.options.packages };
+
+      return;
+    }
+
     const prompts = [
       {
         type: 'checkbox',
