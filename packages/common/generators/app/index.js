@@ -1,5 +1,6 @@
 'use strict';
 
+const merge = require('lodash.merge');
 const Generator = require('yeoman-generator');
 
 const devDependencies = [
@@ -48,7 +49,7 @@ class Yo extends Generator {
 
     pkg.name = this.props.projectname;
 
-    Object.assign(pkg, this.options.dish.extension || {});
+    merge(pkg, this.options.dish.extension || {});
 
     switch (this.options.dish.tester) {
       case 'ava':

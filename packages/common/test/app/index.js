@@ -73,6 +73,9 @@ test.serial('should expand package.json', async (t) => {
           foo: [1, 2],
           bar: {
             1: 2
+          },
+          scripts: {
+            cli: 'build'
           }
         }
       }
