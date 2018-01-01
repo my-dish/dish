@@ -3,7 +3,6 @@
 const Generator = require('yeoman-generator');
 
 const dependencies = [
-  '@my-dish/common',
   'yeoman-generator'
 ];
 
