@@ -3,17 +3,8 @@
 const mkdirp = require('mkdirp');
 const Generator = require('yeoman-generator');
 
-const dependencies = [
-  'react',
-  'classname'
-];
-
 const devDependencies = [
   'babel-cli',
-  'react-dom', // for storybook
-  '@storybook/cli',
-  '@storybook/react',
-  'react-addons-test-utils'
 ];
 
 class Yo extends Generator {
@@ -55,6 +46,25 @@ class Yo extends Generator {
       }
     );
 
+    this.composeWith(
+      require.resolve('@my-dish/generator-react-redux-template'),
+      {
+        template: 'installer',
+        packages: {
+          dependencies: [
+            'react',
+            'classnames'
+          ],
+          devDependencies: [
+            'react-dom', // for storybook
+            '@storybook/cli',
+            '@storybook/react',
+            'react-addons-test-utils'
+          ]
+        }
+      }
+    );
+
     // this.fs.copyTpl( // TODO
     //   this.templatePath('.storybook'),
     //   this.destinationPath('.'),
@@ -65,7 +75,6 @@ class Yo extends Generator {
   }
 
   install() {
-    this.runInstall('npm', dependencies);
     this.runInstall('npm', devDependencies, { 'save-dev': true });
   }
 };

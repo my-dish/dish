@@ -26,8 +26,8 @@ class Yo extends Generator {
           'container',
           'reducer',
           'action',
-          'store', // TODO: add
-          'middleware'
+          'middleware',
+          'installer'
         ]
       }
     ];
@@ -74,6 +74,13 @@ class Yo extends Generator {
           '@my-dish/react-redux-template:middleware',
           {},
           { local: require.resolve('../middleware') }
+        );
+        break;
+      case 'installer':
+        this.composeWith(
+          '@my-dish/react-redux-template:installer',
+          { packages: this.options.packages },
+          { local: require.resolve('../installer') }
         );
         break;
     }
