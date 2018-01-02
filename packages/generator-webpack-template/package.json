@@ -1,0 +1,13 @@
+{
+  "name": "@my-dish/generator-webpack-template",
+  "version": "0.0.1",
+  "description": "",
+  "main": "generators/app/index.js",
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "license": "MIT",
+  "repository": "git@github.com:my-dish/dish.git",
+  "dependencies": {
+    "webpack-merge": "^4.1.1",
+    "yeoman-generator": "^2.0.2"
+  }
+}
