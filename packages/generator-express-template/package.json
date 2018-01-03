@@ -1,0 +1,13 @@
+{
+  "name": "@my-dish/generator-express-template",
+  "version": "0.0.1",
+  "description": "",
+  "main": "generators/app/index.js",
+  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "license": "MIT",
+  "repository": "git@github.com:my-dish/dish.git",
+  "dependencies": {
+    "make-dir": "^1.1.0",
+    "yeoman-generator": "^2.0.2"
+  }
+}
